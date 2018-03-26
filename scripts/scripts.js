@@ -14,4 +14,15 @@ $(document).ready(function(){
         scrollTop: $(this.hash).offset().top - $('.header-outer').outerHeight()
         }, 1500);
     });
+
+    //Parallax 
+    function parallax(){
+        var wScroll = $(window).scrollTop();
+        $('.box-text-outer').css('top',-(wScroll * 0.02)+'em');
+    }
+    $(window).scroll(function(){
+        parallax();
+        //linkSwitching();
+        //fadeOut();
+    });
 });

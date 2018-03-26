@@ -45,6 +45,12 @@
     right: 0;
     background: rgba(0, 0, 0, 0.6);
 }
+.video-outer{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+}
 video{
     position: absolute;
     top: 50%;
@@ -55,6 +61,7 @@ video{
     width: auto;
     height: auto;
     z-index: 0;
+    
 }
 .typing-text-outer{
     font-size: 1.5em;
@@ -71,7 +78,7 @@ video{
     top: 0;
     left: 0;
     //background: rgba(8, 8, 8, 0.4);
-    background: rgba(61, 218, 13, 0.8);
+    background: rgba(61, 218, 13, 0.7);
 }
 .typing-text{
     margin: 2em 1em 1em 1em;
@@ -93,8 +100,49 @@ video{
     
 }
 
+.down-arrow{
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+    background-image: url(../images/down-arrow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px 100px;
+    position: absolute;
+    bottom: 2em; 
+    z-index: 2;
+    left: 10%; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    transition: 1s;
+    &:hover{
+        background-image: url(../images/down-arrow-hover.png);
+    }
+}
+.bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+  }
+  @keyframes bounce {
+    0%, 20%, 50%, 90%, 100% {
+      transform: translateY(0);
+      
+    }
+    40% {
+      transform: translateY(-20px);
+      
+    }
+    60% {
+      transform: translateY(-15px);
+      
+    }
+
+  }
 .font-size-big{
-    font-size: 2.2em;
+    font-size: 2em;
     font-weight: 700;
     text-transform: uppercase;
 }

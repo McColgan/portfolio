@@ -1,7 +1,96 @@
 .intro{
     width: 100%;
-    height: 750px;
+    height: auto;
     padding: 0;
     margin: 0;
     background: #f3f3f3;
+    z-index: 1;
+    position: relative;
+    font-family: 'Poppins',sans-serif;
+}
+.intro-outer{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    //background: black;
+    .intro-h1{
+        font-size: 3em;
+        color: #F46309;
+        position: relative;
+        padding: 0;
+        margin: 0 auto;
+        justify-content: unset;
+        font-weight: 700;
+    }
+    .intro-text{
+        font-weight: 300;
+        //font-size: 1em;
+        //background: cadetblue;
+        position: relative;
+        margin: 0;
+        padding: 0 2em 0 3em;
+        width: 35%;
+        height: auto;
+        color: #F46309;
+        border-left: 1px solid #F46309;
+    }
+    .box-text-outer{
+        width: 30%;
+        height: auto;
+        position: relative;
+        background: #F46309;
+        color: #f3f3f3;
+        margin: 30em 0 0 0;
+        padding: 2em;
+        line-height: 2em;
+        font-weight: 200;
+        -webkit-box-shadow: inset 0px 0px 25px 2px rgba(0,0,0,0.75);
+        -moz-box-shadow: inset 0px 0px 25px 2px rgba(0,0,0,0.75);
+        box-shadow: inset 0px 0px 25px 2px rgba(0,0,0,0.75);
+        border-radius: 3px;
+    }
+}
+
+
+@media (max-width: 900px){
+    .intro-outer{
+        .intro-h1{
+            font-size: 2em;
+        }
+        .intro-text{
+            font-size: 0.9em;
+            padding: 1em 1em 1em 2em;
+        }
+        .box-text-outer{
+            font-size: 0.9em;
+        }
+    }
+}
+@media (max-width: 800px){
+    .intro-outer{
+        flex-direction: column;
+        padding: 3em 0;
+        margin: 0 0 -20em 0;
+        .intro-text{
+            width: 80%;
+            padding: 2em;
+        }
+        .box-text-outer{
+            width: 80%;
+        }
+    }
+}
+@media (max-width: 680px){
+    .intro-outer{
+        margin: 0 0 -25em 0;
+        .intro-text{
+            width: 70%;
+        }
+    }
 }
