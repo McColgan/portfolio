@@ -12,8 +12,8 @@
     z-index: 2;
     width: 280px;
     height: 280px;
-    background: #f3f3f3;
-    left: 50%;
+    background: rgba(61, 218, 13, 1);
+    left: 55%;
     bottom: 50%;
     transform: translate(-50%, 50%);
     -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
@@ -27,7 +27,6 @@
     -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     display: block;
-    background: #f3f3f3;
     position: absolute;
     top: 7.5px;
     left: 7.5px;
@@ -66,17 +65,17 @@ video{
     display: flex;
     align-items: center;
     height: 100%;
-    width: 50%;
+    width: 55%;
     margin: 0;
     padding: 0;
     top: 0;
     left: 0;
     //background: rgba(8, 8, 8, 0.4);
-    background: rgba(244, 99, 9, 0.7);
+    background: rgba(61, 218, 13, 0.8);
 }
 .typing-text{
     margin: 2em 1em 1em 1em;
-    flex-basis: 60%;
+    flex-basis: 70%;
     color: #f3f3f3;
 }
 .name-text{
@@ -90,7 +89,7 @@ video{
     top: 10%;
     right: 0.7em;
     text-align: right;
-    color: rgba(244, 99, 9, 1);
+    color: #3CDA0D;
     
 }
 
@@ -104,7 +103,7 @@ video{
     font-size: 0.7em;
 }
 
-@media (min-width: 1800px){
+@media (min-width: 1500px){
     .typing-text-outer{
         font-size: 2.2em;
     }
@@ -114,6 +113,17 @@ video{
     }
     .font-size-big{
         font-size: 1.8em;
+    }
+    .profile-img{
+        width: 330px;
+        height: 330px;
+    }
+    .profile-img:after{
+        width: 315px;
+        height: 315px;
+        top: 7.5px;
+        left: 7.5px;
+        background-size: 330px 440px;
     }
 }
 
@@ -162,11 +172,11 @@ video{
         font-size: 0.7em;
     }
     .name-text{
-        font-size: 1.7em;
+        font-size: 1.5em;
         top: 4em;
         right: 0.7em;
     }
     .typing-text{
-        flex-basis: 50%;
+        flex-basis: 60%;
     }
 }
