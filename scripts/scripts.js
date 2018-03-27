@@ -4,6 +4,13 @@ $(document).ready(function(){
     $('#nav-icon').click(function(){
         $('.nav-outer').toggleClass('nav-outer--open', 400);
         $(this).toggleClass('open');
+        $('.home-nav').fadeTo(300, 1);
+        $('.intro-nav').fadeTo(500, 1);
+        $('.skills-nav').fadeTo(700, 1);
+        $('.portfolio-nav').fadeTo(900, 1);
+        $('.contact-nav').fadeTo(1100, 1);
+
+        return false;
     });
 
     // Smooth Scrolling
@@ -19,6 +26,7 @@ $(document).ready(function(){
     function parallax(){
         var wScroll = $(window).scrollTop();
         $('.box-text-outer').css('top',-(wScroll * 0.02)+'em');
+        $('.profile-img').css('top',(wScroll * 0.07)+'em');
     }
     $(window).scroll(function(){
         parallax();

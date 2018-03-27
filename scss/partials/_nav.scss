@@ -16,12 +16,12 @@
 
 // SOCIAL MEDIA OUTER //
 .socialMedia-outer{
-    z-index: 1;
+    z-index: 100;
     position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: auto;
+    width: 9em;
     height: auto;
     margin: 0;
     padding: 0;
@@ -33,13 +33,13 @@
 .nav-outer{
     margin: 0;
     padding: 0;
-    position: relative;
+    position: absolute;
     top: 0;
     height: 0px;
     overflow: hidden;
     ul{
         margin: 0 auto;
-        padding: 0;
+        padding: 2em 0 0 0;
         list-style: none;
         background: rgba(8, 8, 8, 0.9);
         display: flex;
@@ -64,26 +64,41 @@
                 padding: 0;
                 margin: 0 auto;
                 display: flex;
-                //background: #080808; 
                 align-items: center;
                 justify-content: space-around;
                 height: 60%;
-                //line-height: 4em;
                 width: 40%;
                 font-family: 'Poppins',sans-serif;
                 font-weight: 600;
-                //border: 3px solid rgba(243, 243, 243, 0.8);
                 transition: 0.8s;
-                //box-sizing: border-box;
                 letter-spacing: 0.5em;
+            }
+            .home-nav,
+            .intro-nav,
+            .skills-nav,
+            .portfolio-nav,
+            .contact-nav{
+                opacity: 0;
             }
         }
     }
 }
 
+
+@keyframes menu{
+    0%{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX()
+    }
+}
 .nav-outer a:hover{
     border: 0px solid rgba(8, 8, 8, 0);
     color: #3CDA0D;
+    transform: translateY(-25%);
     //background: none;
 }
 .nav-outer a::before,
@@ -138,21 +153,23 @@
         height: 4em;
         padding: 0;
         margin: 0;
-        //background: #080808;
+        background: rgba(8, 8, 8, 0.8);
     }
     .nav-outer{
         position: relative;
-        top: 0;
-        background: none;
+        margin: 0 auto;
+        //top: 0;
+        //background: none;
         height: 4em;
         width: 100%;
-        transform: translateY(25%);
+        transform: translateY(5%);
         ul{
             height: 100%;
             flex-direction: row;
             margin: 0 auto;
             background: none;
             justify-content: center;
+            padding: 0;
             li{
                 margin: 0 1em;
                 border-top: none;
@@ -164,7 +181,13 @@
                     width: auto;
                     font-size: 0.7em;
                     background: #080808;
-                    
+                }
+                .home-nav,
+                .intro-nav,
+                .skills-nav,
+                .portfolio-nav,
+                .contact-nav{
+                    opacity: 1;
                 }
             }
         }
@@ -175,6 +198,7 @@
     #nav-icon{
         display: none;
     }
+    
 }
 
 // NAV ICON //
