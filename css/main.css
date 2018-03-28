@@ -11,27 +11,14 @@ html, body {
   width: 100%;
   height: 1000px; }
 
-.facebook-icon,
-.facebook-icon::before,
-.facebook-icon::after {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  background-image: url(../images/facebook-icon.png);
-  margin: 0;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 30px 30px;
-  transition: all ease-out 300ms; }
-
 .twitter-icon,
 .twitter-icon::before,
 .twitter-icon::after {
   position: relative;
   width: 30px;
   height: 30px;
-  background-image: url(../images/twitter-icon.png);
-  margin: 0;
+  background-image: url(../images/twitter-icon-green.png);
+  margin: 0 0.5em;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 30px 30px;
@@ -43,8 +30,8 @@ html, body {
   position: relative;
   width: 30px;
   height: 30px;
-  background-image: url(../images/instagram-icon.png);
-  margin: 0;
+  background-image: url(../images/instagram-icon-green.png);
+  margin: 0 0.5em;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 30px 30px;
@@ -56,8 +43,8 @@ html, body {
   position: relative;
   width: 30px;
   height: 30px;
-  background-image: url(../images/github-icon.png);
-  margin: 0;
+  background-image: url(../images/github-icon-green.png);
+  margin: 0 0.5em;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 30px 30px;
@@ -69,12 +56,18 @@ html, body {
   position: relative;
   width: 30px;
   height: 30px;
-  background-image: url(../images/linkedin-icon.png);
-  margin: 0;
+  background-image: url(../images/linkedin-icon-green.png);
+  margin: 0 0.5em;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 30px 30px;
   transition: all ease-out 300ms; }
+
+.linkedin-icon:hover,
+.github-icon:hover,
+.twitter-icon:hover,
+.instagram-icon:hover {
+  transform: translateY(-30%); }
 
 .header-outer {
   top: 0;
@@ -115,7 +108,7 @@ html, body {
     margin: 0 auto;
     padding: 2em 0 0 0;
     list-style: none;
-    background: rgba(8, 8, 8, 0.9);
+    background: rgba(24, 24, 24, 0.9);
     display: flex;
     flex-direction: column;
     height: 75vh;
@@ -141,7 +134,7 @@ html, body {
         align-items: center;
         justify-content: space-around;
         height: 60%;
-        width: 40%;
+        width: 60%;
         font-family: 'Poppins',sans-serif;
         font-weight: 600;
         transition: 0.8s;
@@ -208,7 +201,9 @@ html, body {
     height: 4em;
     padding: 0;
     margin: 0;
-    background: rgba(8, 8, 8, 0.8); }
+    background: rgba(24, 24, 24, 0.95); }
+  .socialMedia-outer {
+    display: none; }
   .nav-outer {
     position: relative;
     margin: 0 auto;
@@ -232,7 +227,7 @@ html, body {
           min-width: 9em;
           width: auto;
           font-size: 0.7em;
-          background: #080808; }
+          background: #181818; }
         .nav-outer ul li .home-nav,
         .nav-outer ul li .intro-nav,
         .nav-outer ul li .skills-nav,
@@ -408,12 +403,12 @@ video {
 .down-arrow {
   margin: 0;
   padding: 0;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   background-image: url(../images/down-arrow.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100px 100px;
+  background-size: 70px 70px;
   position: absolute;
   bottom: 2em;
   z-index: 2;
@@ -511,7 +506,7 @@ video {
   height: auto;
   padding: 0;
   margin: 0;
-  background: #181818;
+  background: #f3f3f3;
   z-index: 1;
   position: relative;
   font-family: 'Poppins',sans-serif; }
@@ -546,12 +541,11 @@ video {
     width: 30%;
     height: auto;
     position: relative;
-    background: rgba(244, 99, 9, 0.9);
-    color: #080808;
+    background: #f46309;
+    color: #f3f3f3;
     margin: 7em 0 0 0;
     padding: 2em;
     line-height: 1.5em;
-    font-weight: 500;
     border-radius: 3px;
     transform: translateY(30%); }
     .intro-outer .box-text-outer li {
@@ -586,7 +580,7 @@ video {
   .intro-outer {
     margin: 0 0 -25em 0; }
     .intro-outer .intro-text {
-      width: 70%; }
+      width: 75%; }
     .intro-outer .box-text-outer {
       width: auto; } }
 
@@ -595,7 +589,7 @@ video {
   height: 750px;
   padding: 0;
   margin: 0;
-  background: #080808;
+  background: #5F06E5;
   z-index: 1;
   position: relative; }
 
@@ -604,15 +598,102 @@ video {
   height: 750px;
   padding: 0;
   margin: 0;
-  background: #F46309;
+  background: #181818;
   z-index: 1;
   position: relative; }
 
 .contact {
   width: 100%;
-  height: 750px;
+  height: 300px;
   padding: 0;
   margin: 0;
-  background: #f3f3f3;
+  background: #3CDA0D;
   z-index: 1;
   position: relative; }
+
+.footer {
+  width: 100%;
+  height: 6em;
+  padding: 0;
+  margin: 0;
+  background: #181818;
+  z-index: 1;
+  position: relative;
+  font-family: 'Poppins',sans-serif;
+  color: #3CDA0D;
+  letter-spacing: 0.2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center; }
+  .footer h1 {
+    position: relative;
+    text-align: center;
+    font-size: 0.7em;
+    font-weight: 200;
+    padding: 1em;
+    width: auto;
+    border: 3px solid #3CDA0D;
+    font-weight: 500;
+    margin: 0 auto; }
+  .footer .email-a {
+    position: relative;
+    font-size: 0.7em;
+    font-weight: 500;
+    margin: 0 auto;
+    padding: 1.25em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #3CDA0D; }
+
+.socialMedia-footer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  padding: 0; }
+
+.email-a:hover {
+  border: 0px solid rgba(8, 8, 8, 0); }
+
+.email-a::before,
+.email-a::after {
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  box-sizing: border-box;
+  transform: scale(0);
+  transition: 0.5s; }
+
+.email-a::before {
+  border-bottom: 3px solid #3CDA0D;
+  border-left: 3px solid #3CDA0D;
+  transform-origin: 50% 50%; }
+
+.email-a::after {
+  border-top: 3px solid #3CDA0D;
+  border-right: 3px solid #3CDA0D;
+  transform-origin: 50% 50%; }
+
+.email-a:hover::after,
+.email-a:hover::before {
+  transform: scale(1); }
+
+@media (max-width: 1000px) {
+  .footer h1, .footer .email-a {
+    font-size: 0.6em; } }
+
+@media (max-width: 800px) {
+  .footer {
+    height: 11em;
+    flex-direction: column;
+    padding: 0 0 2em 0; }
+    .footer h1 {
+      margin: 0 auto 1em auto; } }

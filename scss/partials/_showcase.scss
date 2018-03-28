@@ -6,6 +6,8 @@
     position: relative;
     overflow: hidden;
 }
+
+// PROFILE IMAGE //
 .profile-img{
     display: block;
     position: absolute;
@@ -30,12 +32,13 @@
     position: absolute;
     top: 7.5px;
     left: 7.5px;
-    //z-index: 1;
     background-image: url(../images/profile-img.jpeg);
     background-size: 280px 373px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+// DARK COLOR LAYER //
 .color-layer{
     z-index: 1;
     position: absolute;
@@ -45,6 +48,8 @@
     right: 0;
     background: rgba(0, 0, 0, 0.6);
 }
+
+// BACKGROUND VIDEO //
 .video-outer{
     position: fixed;
     width: 100%;
@@ -61,8 +66,9 @@ video{
     width: auto;
     height: auto;
     z-index: 0;
-    
 }
+
+// TYPING TEXT //
 .typing-text-outer{
     font-size: 1.5em;
     font-family: 'Poppins', sans-serif;
@@ -70,14 +76,12 @@ video{
     position: absolute;
     z-index: 1;
     display: flex;
-    //align-items: center;
     height: 100%;
     width: 55%;
     margin: 0;
     padding: 7em 0 0 0;
     top: 0;
     left: 0;
-    //background: rgba(8, 8, 8, 0.4);
     background: rgba(61, 218, 13, 0.65);
 }
 .typing-text{
@@ -85,6 +89,8 @@ video{
     flex-basis: 70%;
     color: #f3f3f3;
 }
+
+// WEBSITE NAME TEXT //
 .name-text{
     font-size: 4em;
     font-family: 'Poppins',sans-serif;
@@ -96,19 +102,19 @@ video{
     top: 10%;
     right: 0.7em;
     text-align: right;
-    color: #3CDA0D;
-    
+    color: #3CDA0D;   
 }
 
+// DOWN ARROW //
 .down-arrow{
     margin: 0;
     padding: 0;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     background-image: url(../images/down-arrow.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100px 100px;
+    background-size: 70px 70px;
     position: absolute;
     bottom: 2em; 
     z-index: 2;
@@ -121,6 +127,8 @@ video{
         background-image: url(../images/down-arrow-hover.png);
     }
 }
+
+// DOWN ARROW BOUNCE KEYFRAMES //
 .bounce {
     -moz-animation: bounce 2s infinite;
     -webkit-animation: bounce 2s infinite;
@@ -128,29 +136,30 @@ video{
   }
   @keyframes bounce {
     0%, 20%, 50%, 90%, 100% {
-      transform: translateY(0);
-      
+      transform: translateY(0);  
     }
     40% {
-      transform: translateY(-20px);
-      
+      transform: translateY(-20px);  
     }
     60% {
       transform: translateY(-15px);
-      
     }
-
   }
+
+// FONT SIZE LARGE //
 .font-size-big{
     font-size: 2em;
     font-weight: 700;
     text-transform: uppercase;
 }
+
+// FULL STOP COLOR //
 .stop-color{
     color: #f3f3f3;
     font-size: 0.7em;
 }
 
+// MEDIA QUERIES //
 @media (min-width: 1500px){
     .typing-text-outer{
         font-size: 2.2em;
@@ -174,7 +183,6 @@ video{
         background-size: 330px 440px;
     }
 }
-
 @media (max-width: 1000px){
     .typing-text-outer{
         font-size: 1.2em;
@@ -193,7 +201,6 @@ video{
         background-size: 220px 293px;
     }
 }
-
 @media (max-width: 730px){
     .typing-text-outer{
         font-size: 1em;
@@ -215,7 +222,6 @@ video{
         background-size: 150px 200px;
     }
 }
-
 @media (max-width: 480px){
     .typing-text-outer{
         font-size: 0.7em;

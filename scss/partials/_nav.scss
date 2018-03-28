@@ -29,7 +29,7 @@
     top: 1em;
 }
 
-// NAV OUTER //
+// NAV OUTER MOBILE/TABLET MENU//
 .nav-outer{
     margin: 0;
     padding: 0;
@@ -41,7 +41,7 @@
         margin: 0 auto;
         padding: 2em 0 0 0;
         list-style: none;
-        background: rgba(8, 8, 8, 0.9);
+        background: rgba(24, 24, 24, 0.9);
         display: flex;
         flex-direction: column;
         height: 75vh;
@@ -67,7 +67,7 @@
                 align-items: center;
                 justify-content: space-around;
                 height: 60%;
-                width: 40%;
+                width: 60%;
                 font-family: 'Poppins',sans-serif;
                 font-weight: 600;
                 transition: 0.8s;
@@ -84,7 +84,7 @@
     }
 }
 
-
+// NAV A KEYFRAMES //
 @keyframes menu{
     0%{
         opacity: 0;
@@ -95,11 +95,12 @@
         transform: translateX()
     }
 }
+
+// NAV A HOVER EFFECT //
 .nav-outer a:hover{
     border: 0px solid rgba(8, 8, 8, 0);
     color: #3CDA0D;
     transform: translateY(-25%);
-    //background: none;
 }
 .nav-outer a::before,
 .nav-outer a::after{
@@ -124,17 +125,17 @@
     border-right: 3px solid #3CDA0D;
     transform-origin: 50% 50%;
 }
-
 .nav-outer a:hover::after,
 .nav-outer a:hover::before{
     transform: scale(1);
 }
 
-
 .nav-outer--open{
     height: auto;
     z-index: 1;
 }
+
+// MEDIA QUERIES //
 @media (min-width: 1000px){
     .nav-outer{
         ul{
@@ -148,18 +149,20 @@
         }
     }
 }
+// DESKTOP MENU //
 @media (min-width: 800px){
     .header-outer{
         height: 4em;
         padding: 0;
         margin: 0;
-        background: rgba(8, 8, 8, 0.8);
+        background: rgba(24, 24, 24, 0.95);
+    }
+    .socialMedia-outer{
+        display: none;
     }
     .nav-outer{
         position: relative;
         margin: 0 auto;
-        //top: 0;
-        //background: none;
         height: 4em;
         width: 100%;
         transform: translateY(5%);
@@ -180,7 +183,7 @@
                     min-width: 9em;
                     width: auto;
                     font-size: 0.7em;
-                    background: #080808;
+                    background: #181818;
                 }
                 .home-nav,
                 .intro-nav,
@@ -198,7 +201,6 @@
     #nav-icon{
         display: none;
     }
-    
 }
 
 // NAV ICON //
