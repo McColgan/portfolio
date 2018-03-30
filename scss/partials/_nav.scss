@@ -113,7 +113,7 @@
     right: 0;
     box-sizing: border-box;
     transform: scale(0);
-    transition: 0.5s;
+    transition: 500ms;
 }
 .nav-outer a::before{
     border-bottom: 3px solid #3CDA0D;
@@ -155,7 +155,7 @@
         height: 4em;
         padding: 0;
         margin: 0;
-        background: rgba(24, 24, 24, 0.95);
+        background: rgba(39, 39, 39, 0.8);
     }
     .socialMedia-outer{
         display: none;
@@ -183,7 +183,7 @@
                     min-width: 9em;
                     width: auto;
                     font-size: 0.7em;
-                    background: #181818;
+                    background: #272727;
                 }
                 .home-nav,
                 .intro-nav,
@@ -214,10 +214,10 @@
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
-    -webkit-transition: .4s ease-in-out;
-    -moz-transition: .4s ease-in-out;
-    -o-transition: .4s ease-in-out;
-    transition: .4s ease-in-out;
+    -webkit-transition: 400ms ease-in-out;
+    -moz-transition: 400ms ease-in-out;
+    -o-transition: 400ms ease-in-out;
+    transition: 400ms ease-in-out;
     cursor: pointer;
     z-index: 2;
 }

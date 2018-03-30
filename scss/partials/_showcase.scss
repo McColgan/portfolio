@@ -79,14 +79,14 @@ video{
     height: 100%;
     width: 55%;
     margin: 0;
-    padding: 7em 0 0 0;
+    padding: 4.25em 0 0 0;
     top: 0;
     left: 0;
     background: rgba(61, 218, 13, 0.65);
 }
 .typing-text{
-    margin: 2em 1em 1em 1em;
-    flex-basis: 70%;
+    margin: 2em 1em 1em 1.25em;
+    flex-basis: 60%;
     color: #f3f3f3;
 }
 
@@ -99,7 +99,7 @@ video{
     z-index: 1;
     height: auto;
     width: 40%;
-    top: 10%;
+    top: 1.5em;
     right: 0.7em;
     text-align: right;
     color: #3CDA0D;   
@@ -162,11 +162,13 @@ video{
 // MEDIA QUERIES //
 @media (min-width: 1500px){
     .typing-text-outer{
-        font-size: 2.2em;
+        font-size: 2.1em;
+        padding: 3.75em  0 0 0;
+
     }
     .name-text{
         font-size: 6em;
-        top: 5%;
+        top: 1em;
     }
     .font-size-big{
         font-size: 1.8em;
@@ -186,10 +188,11 @@ video{
 @media (max-width: 1000px){
     .typing-text-outer{
         font-size: 1.2em;
+        padding: 5em 0 0 0;
     }
     .name-text{
         font-size: 3em;
-        top: 10%;
+        top: 6rem;
     }
     .profile-img{
         width: 220px;
@@ -204,11 +207,12 @@ video{
 @media (max-width: 730px){
     .typing-text-outer{
         font-size: 1em;
+        padding: 7.25em 0 0 0;
     }
     .name-text{
         font-size: 2em;
         right: 1em;
-        top: 15%;
+        top: 8rem;
     }
     .profile-img{
         width: 150px;
@@ -225,13 +229,18 @@ video{
 @media (max-width: 480px){
     .typing-text-outer{
         font-size: 0.7em;
+        padding: 10em 0 0 0;
     }
     .name-text{
         font-size: 1.5em;
-        top: 4em;
+        top: 5em;
         right: 0.7em;
     }
     .typing-text{
         flex-basis: 60%;
+    }
+    .down-arrow{
+        clear: bottom;
+        top: 30em;
     }
 }
