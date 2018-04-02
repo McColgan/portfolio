@@ -13,21 +13,47 @@
     color: #3CDA0D;
     margin: 0;
     padding: 0;
-    text-align: center;
+    //text-align: center;
     //padding: 2em;
     font-size: 1.8em;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 0.2rem;
     transform: rotate(-90deg);
     left: -3.5em;
-    top: 9em;
+    top: 15em;
 }
 .portfolio-header::before{
     content: '';
     position: absolute;
     height: 70%;
-    width: 3px;
+    width: 2px;
     background: #3CDA0D;
     margin-left: -1em;
     margin-top: 0.25em;
+}
+.portfolio-title{
+    margin: 0.5em auto;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: inline-block;
+    color: rgba(#991616,.75);
+    font-size: 6em;
+    text-align: center;
+    &:before {
+        content: 'PORTFOLIO.';
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        color: rgba(#f3f3f3,.5);
+      }  
+      &:after {
+        content: 'PORTFOLIO.';
+        position: absolute;
+        top: -8px;
+        left: -8px;
+        color: rgba(#3cda0d,.85);
+      }
 }
