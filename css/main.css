@@ -608,7 +608,7 @@ video {
   height: auto;
   padding: 0;
   margin: 0;
-  background: #f3f3f3;
+  background: #616161;
   z-index: 1;
   position: relative; }
 
@@ -641,7 +641,7 @@ video {
   transform: translateX(-50%); }
 
 .skills-header {
-  color: #272727;
+  color: #f3f3f3;
   font-size: 3em;
   padding: 2em 0 0 0;
   margin: 0 auto;
@@ -659,112 +659,124 @@ video {
   flex-direction: column; }
   .skills-outer .skills-flexbox-h1 {
     font-size: 1.5em;
-    color: #272727;
+    color: #f3f3f3;
     font-weight: 500;
     text-align: center; }
   .skills-outer .skills-flexbox {
     position: relative;
-    max-width: 800px;
+    max-width: 900px;
     margin: 2em auto 8em auto;
+    padding: 2em;
     width: auto;
     height: auto;
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap; }
-    .skills-outer .skills-flexbox .skill-box {
-      position: relative;
-      width: 170px;
-      height: 170px;
-      padding: 0;
-      margin: 0.5em;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      flex-direction: column;
-      flex-flow: 2;
-      background: #272727;
-      color: #f3f3f3;
-      border-radius: 50%;
-      transition: 400ms;
-      -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
-      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4); }
-      .skills-outer .skills-flexbox .skill-box:hover {
-        background: #616161;
-        transform: translateY(-7%); }
-      .skills-outer .skills-flexbox .skill-box p {
-        font-size: 0.8em;
-        font-weight: 500;
-        text-align: center;
-        margin: 0 auto -1.5em auto;
-        transition: 400ms; }
-      .skills-outer .skills-flexbox .skill-box .skill-icon {
-        display: block;
-        position: relative;
-        width: 60px;
-        height: 60px;
-        background-position: center;
-        background-size: 60px auto;
-        background-repeat: no-repeat;
-        padding: 0;
-        margin: 0; }
-      .skills-outer .skills-flexbox .skill-box .html-icon {
-        background-image: url(../images/html-icon.png); }
-      .skills-outer .skills-flexbox .skill-box .sass-icon {
-        background-image: url(../images/sass-icon.png);
-        width: 90px;
-        height: 90px;
-        background-size: 90px auto; }
-      .skills-outer .skills-flexbox .skill-box .js-icon {
-        background-image: url(../images/js-icon.png);
-        width: 70px;
-        height: 70px;
-        background-size: 70px auto; }
-      .skills-outer .skills-flexbox .skill-box .json-icon {
-        background-image: url(../images/json-icon.png);
-        width: 70px;
-        height: 70px;
-        background-size: 70px auto; }
-      .skills-outer .skills-flexbox .skill-box .photo-icon {
-        background-image: url(../images/photo-icon.png);
-        width: 50px;
-        height: 50px;
-        background-size: 50px auto; }
-      .skills-outer .skills-flexbox .skill-box .responsive-icon {
-        background-image: url(../images/responsive-icon.png); }
-      .skills-outer .skills-flexbox .skill-box .vscode-icon {
-        background-image: url(../images/vscode-icon.png);
-        width: 70px;
-        height: 70px;
-        background-size: 70px auto; }
-      .skills-outer .skills-flexbox .skill-box .octocat-icon {
-        background-image: url(../images/octocat.png);
-        width: 70px;
-        height: 70px;
-        background-size: 70px auto; }
-      .skills-outer .skills-flexbox .skill-box .ps-icon {
-        background-image: url(../images/ps-icon.png);
-        width: 50px;
-        height: 50px;
-        background-size: 50px auto; }
-      .skills-outer .skills-flexbox .skill-box .affinity-icon {
-        background-image: url(../images/affinity-icon.png); }
-      .skills-outer .skills-flexbox .skill-box .chrome-icon {
-        background-image: url(../images/chrome-icon.png);
-        width: 50px;
-        height: 50px;
-        background-size: 50px auto; }
-      .skills-outer .skills-flexbox .skill-box .nodejs-icon {
-        width: 70px;
-        height: 70px;
-        background-size: 70px auto;
-        background-image: url(../images/nodejs-icon.png); }
-      .skills-outer .skills-flexbox .skill-box .gulp-icon {
-        background-image: url(../images/gulp-icon.png); }
-      .skills-outer .skills-flexbox .skill-box .ios-icon {
-        background-image: url(../images/ios-icon.png);
-        width: 70px;
-        height: 70px;
-        background-size: 70px auto; }
+    flex-wrap: wrap;
+    background-image: url(../images/technologies-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 30px #000000; }
+  .skills-outer .techSkills-bg {
+    background-image: url(../images/techSkills-bg.jpg); }
+
+.skill-box {
+  position: relative;
+  width: 160px;
+  height: 170px;
+  padding: 0.5em;
+  margin: 0.5em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  flex-flow: 2;
+  background: rgba(97, 97, 97, 0.8);
+  color: #f3f3f3;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: 400ms; }
+  .skill-box:hover {
+    background: #8b8b8b;
+    transform: translate(0, -7%); }
+  .skill-box p {
+    font-size: 0.8em;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 auto -1.5em auto;
+    transition: 400ms; }
+  .skill-box .skill-icon {
+    display: block;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-size: 60px auto;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0; }
+  .skill-box .html-icon {
+    background-image: url(../images/html-icon.png); }
+  .skill-box .sass-icon {
+    background-image: url(../images/sass-icon.png);
+    width: 90px;
+    height: 90px;
+    background-size: 90px auto; }
+  .skill-box .js-icon {
+    background-image: url(../images/js-icon.png);
+    width: 70px;
+    height: 70px;
+    background-size: 70px auto; }
+  .skill-box .json-icon {
+    background-image: url(../images/json-icon.png);
+    width: 70px;
+    height: 70px;
+    background-size: 70px auto; }
+  .skill-box .photo-icon {
+    background-image: url(../images/photo-icon.png);
+    width: 50px;
+    height: 50px;
+    background-size: 50px auto; }
+  .skill-box .responsive-icon {
+    background-image: url(../images/responsive-icon.png); }
+  .skill-box .vscode-icon {
+    background-image: url(../images/vscode-icon.png);
+    width: 70px;
+    height: 70px;
+    background-size: 70px auto; }
+  .skill-box .octocat-icon {
+    background-image: url(../images/octocat.png);
+    width: 70px;
+    height: 70px;
+    background-size: 70px auto; }
+  .skill-box .ps-icon {
+    background-image: url(../images/ps-icon.png);
+    width: 50px;
+    height: 50px;
+    background-size: 50px auto; }
+  .skill-box .affinity-icon {
+    background-image: url(../images/affinity-icon.png); }
+  .skill-box .chrome-icon {
+    background-image: url(../images/chrome-icon.png);
+    width: 50px;
+    height: 50px;
+    background-size: 50px auto; }
+  .skill-box .nodejs-icon {
+    width: 70px;
+    height: 70px;
+    background-size: 70px auto;
+    background-image: url(../images/nodejs-icon.png); }
+  .skill-box .gulp-icon {
+    background-image: url(../images/gulp-icon.png); }
+  .skill-box .ios-icon {
+    background-image: url(../images/ios-icon.png);
+    width: 70px;
+    height: 70px;
+    background-size: 70px auto; }
+
+.box-padding {
+  margin: 0.5em 2em; }
 
 .portfolio {
   width: 100%;
