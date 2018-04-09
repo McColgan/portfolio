@@ -42,18 +42,74 @@
     color: rgba(#991616,.75);
     font-size: 6em;
     text-align: center;
-    &:before {
+    &:before{
         content: 'PORTFOLIO.';
         position: absolute;
         top: 8px;
         left: 8px;
         color: rgba(#f3f3f3,.5);
       }  
-      &:after {
+      &:after{
         content: 'PORTFOLIO.';
         position: absolute;
         top: -8px;
         left: -8px;
         color: rgba(#3cda0d,.85);
       }
+}
+
+// MEDIA QUERIES //
+@media (max-width: 1200px){
+    .portfolio-title{
+        font-size: 4em;
+        &::before{
+            top: 6px;
+            left: 6px;
+        }
+        &::after{
+            top: -6px;
+            left: -6px;
+        }
+    }
+    .portfolio-header{
+        font-size: 1.6em;
+        //left: -3.5em;
+        //top: 15em;
+    }
+}
+@media (max-width: 600px){
+    .portfolio-title{
+        font-size: 3em;
+        &::before{
+            top: 4.5px;
+            left: 4.5px;
+        }
+        &::after{
+            top: -4.5px;
+            left: -4.5px;
+        }
+    }
+    .portfolio-header{
+        font-size: 1.2em;
+        left: -4.5em;
+        //top: 15em;
+    }
+}
+@media (max-width: 480px){
+    .portfolio-title{
+        font-size: 2.5em;
+        &::before{
+            top: 4px;
+            left: 4px;
+        }
+        &::after{
+            top: -4px;
+            left: -4px;
+        }
+    }
+    .portfolio-header{
+        font-size: 1em;
+        left: -5em;
+        //top: 15em;
+    }
 }

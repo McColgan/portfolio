@@ -56,13 +56,24 @@
         -webkit-clip-path: polygon(5% 5%, 100% 0, 96% 94%, 0% 100%);
         clip-path: polygon(5% 5%, 100% 0, 96% 94%, 0% 100%);
         p{
-            font-size: 1.6em;
+            font-size: 1.4em;
             padding: 0 0.4em;
             font-weight: 700;
             text-align: center;
         }
         li{
             margin: 2em 0;
+            position: relative;
+            list-style: none;
+            &::before{
+                content: '';
+                position: absolute;
+                left: -1.5em;
+                top: 0.3em;
+                width: 2px;
+                height: 15px;
+                background: #272727;
+            }
         }
     }
 }
