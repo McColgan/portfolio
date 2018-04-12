@@ -12,6 +12,7 @@
         <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="scripts/scripts.js" async></script>
         <script type="text/javascript" src="scripts/typing.js" async></script>
+        <script type="text/javascript" src="scripts/slider.js" async></script>
     </head>
     <body>
         <!-- NAV -->
@@ -58,7 +59,7 @@
         <section class="intro" id="Intro">
             <div class="intro-outer">
                 
-                <p class="intro-text"><span class="intro-h1">Hello.</span><br><br>Liam McColgan is a Peterborough based Designer who loves to help people connect their business and passions through the power of the internet.<br><br>
+                <p class="intro-text"><span class="intro-h1">Hello.</span><br><br>Liam McColgan is a UK based Designer who loves to help people connect their business and passions through the power of the internet.<br><br>
                 He uses his ever expanding knowledge of HTML, CSS and Javascript to help his clients present their own vision and footprint on the web.<br><br>
                 Building websites for nearly a year, Liam has built upon core skills in Web Design; creating a foundation in which to explore and nurture the endless possibilities of an ever evolving industry.<br><br>
                 He believes in a life where work and play are forever intertwined.<br><br>
@@ -153,18 +154,40 @@
 
         <!-- PORTFOLIO -->
         <section class="portfolio" id="Portfolio">
+            
             <h1 class="portfolio-header">Some of my work.</h1>
             <h1 class="portfolio-title">PORTFOLIO.</h1>
+            <div id="wrapper" class="skewed">
+                
+                <!-- BOTTOM LAYER -->
+                <div class="layer bottom-layer">
+                    <div class="content-wrap">
+                        <img class="img1" src="images/laptop1.png" alt="Pennyyoga.com desktop image">
+                        <img class="img2" src="images/phone1.png" alt="Pennyyoga.com phone image">
+                    </div>
+                    <a href="http://pennyyoga.com/" class="website-link yoga-link" target="_blank">Visit Site</a>
+                </div>
+                <!-- TOP LAYER -->
+                <div class="layer top-layer">
+                    <div class="content-wrap">
+                        <img class="img1" src="images/laptop2.png" alt="Reframecoachmentor.com desktop image">
+                        <img class="img2" src="images/phone2.png" alt="Reframecoachmentor.com phone image">
+                        <a href="http://reframecoachmentor.com/" class="website-link reframe-link" target="_blank">Visit Site</a>
+                    </div>
+                </div><!-- HANDLE -->
+                    <div class="handle"></div>
+            </div>
+            
         </section>
 
         <!-- CONTACT -->
-        <section class="contact" id="Contact">
+        <!-- <section class="contact" id="Contact">
             <div class="contact-color-layer"></div>
-            <!-- <div class="contact-video-outer">
+            <div class="contact-video-outer">
                 <video src="../images/contact-video.mp4" autoplay="true" loop="true"></video>
             </div> -->
-            <p class="contact-quote"><span class="quote-marks">"</span>There is only one corner of the Universe you can be certain of improving, and that's your own self.<span class="quote-marks">"</span><br>- Aldous Huxley</p>
-        </section>
+            <!--<p class="contact-quote"><span class="quote-marks">"</span>There is only one corner of the Universe you can be certain of improving, and that's your own self.<span class="quote-marks">"</span><br>- Aldous Huxley</p>
+        </section> -->
 
         <!-- FOOTER -->
         <footer class="footer">
