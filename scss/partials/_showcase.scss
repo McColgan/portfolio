@@ -20,7 +20,7 @@
     -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     //border: 3px solid #f3f3f3;
-    margin: 15em 0 0 0;
+    margin: 10em 0 0 0;
 }
 .profile-img:after{
     content: '';
@@ -100,10 +100,11 @@
     z-index: 1;
     height: auto;
     width: 40%;
-    top: 1.5em;
+    top: 15%;
     right: 0.7em;
     text-align: right;
-    color: #3CDA0D;   
+    color: #3CDA0D;
+    line-height: 2.5em;   
 }
 
 // DOWN ARROW //
@@ -149,15 +150,16 @@
 
 // FONT SIZE LARGE //
 .font-size-big{
-    font-size: 2em;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 200;
+    //text-transform: uppercase;
 }
 
 // FULL STOP COLOR //
 .stop-color{
     color: #f3f3f3;
-    font-size: 0.7em;
+    font-size: 1em;
+    font-weight: 700;
 }
 
 // MEDIA QUERIES //
@@ -193,7 +195,8 @@
     }
     .name-text{
         font-size: 3em;
-        top: 6rem;
+        line-height: 2.5em;
+        //top: 6rem;
     }
     .profile-img{
         width: 220px;
@@ -213,7 +216,8 @@
     .name-text{
         font-size: 2em;
         right: 1em;
-        top: 8rem;
+        top: 10rem;
+        line-height: 3em;
     }
     .profile-img{
         width: 150px;
@@ -234,8 +238,9 @@
     }
     .name-text{
         font-size: 1.5em;
-        top: 5em;
+        top: 10rem;
         right: 0.7em;
+        line-height: 4em;
     }
     .typing-text{
         flex-basis: 60%;
