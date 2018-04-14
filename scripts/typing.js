@@ -64,7 +64,7 @@ $(document).ready(function(){
         /* Some GLaDOS quotes from Portal 2 chapter 9: The Part Where He Kills You
         * Source: http://theportalwiki.com/wiki/GLaDOS_voice_lines#Chapter_9:_The_Part_Where_He_Kills_You
         */
-    };var strings = ['Hi i\'m Liam . . .','I love using my passion for coding, design, and UX to enable people to connect to the World via the power of <HTML>, {CSS} and (JavaScript) . . .'];
+    };var strings = ['Hi i\'m Liam...','I love using my passion for coding, design, and UX to enable people to connect to the World via the power of <HTML>, {CSS} and (JavaScript)...'];
     var counter = 0;
     
     var options = {

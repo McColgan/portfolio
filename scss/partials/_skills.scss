@@ -1,0 +1,328 @@
+.skills{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    //background: linear-gradient(#070000, #4C0001, #070000);
+    background: linear-gradient(to right, #00d2ff, #3a7bd5);
+    z-index: 1;
+    position: relative;
+}
+.down-triangle{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -4em;
+    padding: 0;
+    margin: 0;
+    background-image: url(../images/down-triangle.png);
+    background-size: 150px 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.up-triangle{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    bottom: -4em;
+    padding: 0;
+    margin: 0;
+    background-image: url(../images/up-triangle.png);
+    background-size: 150px 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.skills-header{
+    position: absolute;
+    color: rgb(189, 0, 142);
+    font-size: 9em;
+    padding: 0.5em 0 0 0.4em;
+    margin: 0;
+    //text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    line-height: 0.7em;
+    &::before{
+        content: '';
+        position: absolute;
+        height: 5px;
+        width: 20%;
+        bottom: -0.2em;
+        background: rgb(189, 0, 142);
+    }
+}
+.skills-outer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 3em 0 0 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+// SKILLS FLEXBOX //  
+.skills-flexbox{
+    position: relative;
+    max-width: 800px;
+    margin: 18em auto 8em auto;
+    padding: 2em;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-image: url(../images/technologies-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 30px #000000;
+    border: 10px solid rgb(189, 0, 142);
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(189, 0, 142, 0.4);
+    }
+}
+.techSkills-bg{
+    background-image: url(../images/techSkills-bg.jpg);
+    &::after{
+        content: 'Technical Skills.';
+        position: absolute;
+        top: -1.5em;
+        right: -0.21em;
+        font-size: 3em;
+        color: rgb(189, 0, 142);
+        font-weight: 700;
+        border: 10px solid rgb(189, 0, 142);
+        z-index: -1;
+    }
+}
+.technologies-bg{
+    margin: 0 auto 8em auto;
+    &::after{
+        content: 'Technologies.';
+        position: absolute;
+        top: -1.5em;
+        right: -0.2em;
+        font-size: 3em;
+        color: rgb(189, 0, 142);
+        font-weight: 700;
+        border: 10px solid rgb(189, 0, 142);
+        z-index: -1;
+    }
+}
+
+// SKILL BOX //
+.skill-box{
+    display: block;
+    position: relative;
+    width: 150px;
+    height: 160px;
+    margin: 0.5em;
+    background: rgba(155, 0, 116, 0.45);
+    color: #f3f3f3;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: 400ms;
+    &:hover{
+        transform: translate(0, -7%);
+        background: rgba(189, 0, 142, 1);
+    }
+}
+.skill-box img{
+    width: 100%;
+}
+.skill-box-content{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0.5em;
+    right: 0;
+    bottom: 1.5em;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    p{
+        position: relative;
+        font-weight: 400;
+        font-size: 0.9em;
+        text-align: center;
+        padding: 1em 1.5em 0 1.5em;
+    }
+}
+.skill-icon{
+    //display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-size: 50px auto;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+} 
+.html-icon{
+    background-image: url(../images/html-icon.png);
+}
+.sass-icon{
+    background-image: url(../images/sass-icon.png);
+    width: 70px;
+    height: 70px;
+    background-size: 70px auto; 
+}
+.js-icon{
+    background-image: url(../images/js-icon.png);
+    /* width: 70px;
+    height: 70px;
+    background-size: 70px auto; */
+}
+.json-icon{
+    background-image: url(../images/json-icon.png);
+    /* width: 70px;
+    height: 70px;
+    background-size: 70px auto; */
+}   
+.photo-icon{
+    background-image: url(../images/photo-icon.png);
+    width: 40px;
+    height: 40px;
+    background-size: 40px auto; 
+}
+.responsive-icon{
+    background-image: url(../images/responsive-icon.png);
+    width: 40px;
+    height: 40px;
+    background-size: 40px auto; 
+}
+.vscode-icon{
+    background-image: url(../images/vscode-icon.png);
+    /* width: 70px;
+    height: 70px;
+    background-size: 70px auto; */
+}
+.octocat-icon{
+    background-image: url(../images/octocat.png);
+    /* width: 70px;
+    height: 70px;
+    background-size: 70px auto; */
+}
+.ps-icon{
+    background-image: url(../images/ps-icon.png);
+    width: 40px;
+    height: 40px;
+    background-size: 40px auto; 
+}
+.affinity-icon{
+    background-image: url(../images/affinity-icon.png);
+}
+.chrome-icon{
+    background-image: url(../images/chrome-icon.png);
+    width: 40px;
+    height: 40px;
+    background-size: 40px auto; 
+}
+.nodejs-icon{
+    /* width: 70px;
+    height: 70px;
+    background-size: 70px auto; */
+    background-image: url(../images/nodejs-icon.png);
+}
+.gulp-icon{
+    background-image: url(../images/gulp-icon.png);
+}
+.ios-icon{
+    background-image: url(../images/ios-icon.png);
+    /* width: 70px;
+    height: 70px;
+    background-size: 70px auto;*/
+} 
+    
+.box-padding{
+    margin: 0.5em 2em;
+}
+
+// MEDIA QUERIES //
+@media (max-width: 1000px){
+    .skills-flexbox{
+        margin: 12em auto 8em auto;
+    }
+    .skills-header{
+        font-size: 6em;
+    }
+    .techSkills-bg,
+    .technologies-bg{
+        &::after{
+            font-size: 2.5rem;
+            top: -1.6em;
+            right: -0.25em;
+        }
+    }
+    .technologies-bg{
+        margin: 0 auto 8em auto;
+    }
+}
+@media (max-width: 700px){
+    .techSkills-bg,
+    .technologies-bg{
+        &::after{
+        font-size: 2em;
+        top: -1.7em;
+        right: -0.3em;
+        }
+    }
+    .technologies-bg{
+        margin: 0 auto 8em auto;
+    }
+}
+
+@media (max-width: 600px){
+    .skills-header{
+        font-size: 4em;
+        top: 1em;
+        left: 0;
+    }
+    .skills-flexbox{
+        padding: 1em 0.25em;
+        margin: 14em auto 8em auto;
+    }
+    .skill-box{
+        //width: 130px;
+        //height: 140px;
+        margin: 0.5em 0.5em;
+        background: rgba(155, 0, 116, 0.8);
+    }
+    .techSkills-bg,
+    .technologies-bg{
+        &::after{
+        font-size: 1.5em;
+        top: -1.9em;
+        right: -0.4em;
+        }
+    }
+    .technologies-bg{
+        margin: 0 auto 8em auto;
+    }
+    .skill-box-content{
+        p{
+            font-size: 0.8em;
+            padding: 1.5em 1.5em 0 1.5em;
+            margin: 0 auto;
+            font-weight: 600;
+        }
+    }
+    
+    
+}

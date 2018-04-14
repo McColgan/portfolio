@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900|Space+Mono:400,700");
 html, body {
   font-size: 16px;
   z-index: 0;
@@ -348,7 +348,7 @@ html, body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.6); }
+  background: rgba(0, 0, 0, 0.4); }
 
 .video-outer {
   position: fixed;
@@ -368,8 +368,8 @@ html, body {
 
 .typing-text-outer {
   font-size: 1.5em;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 800;
+  font-family: 'Space Mono', sans-serif;
+  font-weight: 700;
   position: absolute;
   z-index: 1;
   display: flex;
@@ -537,6 +537,13 @@ html, body {
     margin: 0 auto;
     justify-content: unset;
     font-weight: 700; }
+    .intro-outer .intro-h1::before {
+      content: '';
+      position: absolute;
+      height: 4px;
+      width: 20%;
+      bottom: 0;
+      background: #F46309; }
   .intro-outer .intro-text {
     font-weight: 300;
     position: relative;
@@ -661,6 +668,13 @@ html, body {
   font-weight: 700;
   letter-spacing: 0.5rem;
   line-height: 0.7em; }
+  .skills-header::before {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 20%;
+    bottom: -0.2em;
+    background: #bd008e; }
 
 .skills-outer {
   position: relative;
@@ -703,22 +717,26 @@ html, body {
   .techSkills-bg::after {
     content: 'Technical Skills.';
     position: absolute;
-    top: -1.3em;
-    right: 0;
+    top: -1.5em;
+    right: -0.21em;
     font-size: 3em;
     color: #bd008e;
-    font-weight: 700; }
+    font-weight: 700;
+    border: 10px solid #bd008e;
+    z-index: -1; }
 
 .technologies-bg {
   margin: 0 auto 8em auto; }
   .technologies-bg::after {
     content: 'Technologies.';
     position: absolute;
-    top: -1.3em;
-    right: 0;
+    top: -1.5em;
+    right: -0.2em;
     font-size: 3em;
     color: #bd008e;
-    font-weight: 700; }
+    font-weight: 700;
+    border: 10px solid #bd008e;
+    z-index: -1; }
 
 .skill-box {
   display: block;
@@ -726,7 +744,7 @@ html, body {
   width: 150px;
   height: 160px;
   margin: 0.5em;
-  background: rgba(155, 0, 116, 0.7);
+  background: rgba(155, 0, 116, 0.45);
   color: #f3f3f3;
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -853,7 +871,8 @@ html, body {
   .techSkills-bg::after,
   .technologies-bg::after {
     font-size: 2.5rem;
-    top: -1.35em; }
+    top: -1.6em;
+    right: -0.25em; }
   .technologies-bg {
     margin: 0 auto 8em auto; } }
 
@@ -861,7 +880,8 @@ html, body {
   .techSkills-bg::after,
   .technologies-bg::after {
     font-size: 2em;
-    top: -1.4em; }
+    top: -1.7em;
+    right: -0.3em; }
   .technologies-bg {
     margin: 0 auto 8em auto; } }
 
@@ -874,17 +894,20 @@ html, body {
     padding: 1em 0.25em;
     margin: 14em auto 8em auto; }
   .skill-box {
-    margin: 0.5em 0.5em; }
+    margin: 0.5em 0.5em;
+    background: rgba(155, 0, 116, 0.8); }
   .techSkills-bg::after,
   .technologies-bg::after {
     font-size: 1.5em;
-    top: -1.5em; }
+    top: -1.9em;
+    right: -0.4em; }
   .technologies-bg {
     margin: 0 auto 8em auto; }
   .skill-box-content p {
     font-size: 0.8em;
     padding: 1.5em 1.5em 0 1.5em;
-    margin: 0 auto; } }
+    margin: 0 auto;
+    font-weight: 600; } }
 
 .portfolio {
   width: 100%;
@@ -915,7 +938,7 @@ html, body {
   height: 70%;
   width: 2px;
   background: #3CDA0D;
-  margin-left: -1em;
+  margin-left: -0.75em;
   margin-top: 0.25em; }
 
 .portfolio-title {

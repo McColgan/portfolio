@@ -1,0 +1,83 @@
+
+// DEFAULT STYLES //
+html, body{
+    font-size: 16px;
+    z-index: 0;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    color: #080808;
+    background: #c2c2c2;
+    width: 100%;
+    height: 1000px;
+}
+
+
+// TWITTER ICON //
+.twitter-icon,
+.twitter-icon::before,
+.twitter-icon::after{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/twitter-icon-green.png);
+    margin: 0 0.5em;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 30px 30px;
+    transition: all ease-out 300ms;
+}
+
+// INSTAGRAM ICON //
+.instagram-icon,
+.instagram-icon::before,
+.instagram-icon::after{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/instagram-icon-green.png);
+    margin: 0 0.5em;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 30px 30px;
+    transition: all ease-out 300ms;
+}
+
+// GITHUB ICON //
+.github-icon,
+.github-icon::before,
+.github-icon::after{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/github-icon-green.png);
+    margin: 0 0.5em;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 30px 30px;
+    transition: all ease-out 300ms;
+}
+
+//LINKEDIN ICON //
+.linkedin-icon,
+.linkedin-icon::before,
+.linkedin-icon::after{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/linkedin-icon-green.png);
+    margin: 0 0.5em;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 30px 30px;
+    transition: all ease-out 300ms;
+}
+
+// SOCIAL MEDIA ICON HOVER EFFECT //
+.linkedin-icon:hover,
+.github-icon:hover,
+.twitter-icon:hover,
+.instagram-icon:hover{
+    transform: translateY(-30%);
+}
