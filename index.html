@@ -221,13 +221,51 @@
         </section>
 
         <!-- CONTACT -->
-        <!-- <section class="contact" id="Contact">
-            <div class="contact-color-layer"></div>
-            <div class="contact-video-outer">
-                <video src="../images/contact-video.mp4" autoplay="true" loop="true"></video>
-            </div> -->
-            <!--<p class="contact-quote"><span class="quote-marks">"</span>There is only one corner of the Universe you can be certain of improving, and that's your own self.<span class="quote-marks">"</span><br>- Aldous Huxley</p>
-        </section> -->
+        <section class="contact" id="Contact">
+            
+            <!-- <p class="contact-quote"><span class="quote-marks">"</span>There is only one corner of the Universe you can be certain of improving, and that's your own self.<span class="quote-marks">"</span><br>- Aldous Huxley</p> -->
+            <div class="contact-flexbox">
+                <div id="map"></div>
+                <div class="contact-box">
+                    <h1>Like to collaborate? Let's talk!</h1>
+                    <table>
+                        <form name="contactform" method="post" action="send_form_email.php">
+                            <tr>
+                                <td valign="top">
+                                    <label for="name">Name.</label>
+                                </td>
+                                <td valign="top">
+                                    <input  type="text" name="first_name" maxlength="50">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <label for="email">Email.</label>
+                                </td>
+                                <td valign="top">
+                                    <input  type="text" name="email" maxlength="80">
+                                </td>
+                            <tr>
+                            <tr>
+                                <td valign="top">
+                                    <label for="comments">Comments.</label>
+                                </td>
+                                <td valign="top">
+                                    <textarea  name="comments" maxlength="1000" cols="25" rows="8"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="submit-btn">
+                                        <input class="input-a" type="submit" value="Submit"><a href="http://www.freecontactform.com/email_form.php"></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </form>
+                    </table>
+                </div>
+            </div>
+        </section>
 
         <!-- FOOTER -->
         <footer class="footer">
@@ -246,8 +284,115 @@
 
 
 
+        <script>
+            function initMap(){
+                // Map options //
+                var options = {
+                    zoom:8,
+                    center:{lat:52.57364,lng:-0.24777},
+                    styles: [
+                        {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+                        {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+                        {elementType: 'labels.text.fill', stylers: [{color: '#3CDA0D'}]},
+                        {
+                        featureType: 'administrative.locality',
+                        elementType: 'labels.text.fill',
+                        stylers: [{color: '#3CDA0D'}]
+                        },
+                        {
+                        featureType: 'poi',
+                        elementType: 'labels.text.fill',
+                        stylers: [{color: '#d59563'}]
+                        },
+                        {
+                        featureType: 'poi.park',
+                        elementType: 'geometry',
+                        stylers: [{color: '#263c3f'}]
+                        },
+                        {
+                        featureType: 'poi.park',
+                        elementType: 'labels.text.fill',
+                        stylers: [{color: '#6b9a76'}]
+                        },
+                        {
+                        featureType: 'road',
+                        elementType: 'geometry',
+                        stylers: [{color: '#38414e'}]
+                        },
+                        {
+                        featureType: 'road',
+                        elementType: 'geometry.stroke',
+                        stylers: [{color: '#212a37'}]
+                        },
+                        {
+                        featureType: 'road',
+                        elementType: 'labels.text.fill',
+                        stylers: [{color: '#9ca5b3'}]
+                        },
+                        {
+                        featureType: 'road.highway',
+                        elementType: 'geometry',
+                        stylers: [{color: '#3CDA0D'}]
+                        },
+                        {
+                        featureType: 'road.highway',
+                        elementType: 'geometry.stroke',
+                        stylers: [{color: '#1f2835'}]
+                        },
+                        {
+                        featureType: 'road.highway',
+                        elementType: 'labels.text.fill',
+                        stylers: [{color: '#f3d19c'}]
+                        },
+                        {
+                        featureType: 'transit',
+                        elementType: 'geometry',
+                        stylers: [{color: '#2f3948'}]
+                        },
+                        {
+                        featureType: 'transit.station',
+                        elementType: 'labels.text.fill',
+                        stylers: [{color: '#d59563'}]
+                        },
+                        {
+                        featureType: 'water',
+                        elementType: 'geometry',
+                        stylers: [{color: '#17263c'}]
+                        },
+                        {
+                        featureType: 'water',
+                        elementType: 'labels.text.fill',
+                        stylers: [{color: '#515c6d'}]
+                        },
+                        {
+                        featureType: 'water',
+                        elementType: 'labels.text.stroke',
+                        stylers: [{color: '#17263c'}]
+                        }
+                    ]
+        
+                }
+                // New map //
+                var map = new google.maps.Map(document.getElementById('map'), options);
+                
+                // Add marker //
+                var marker = new google.maps.Marker({
+                    position:{lat:52.57364,lng:-0.24777},
+                    map:map
+                });
 
+                var infoWindow = new google.maps.InfoWindow({
+                    content:'<h1>Oh, Hello!</h1>'
+                });
 
+                marker.addListener('click', function(){
+                    infoWindow.open(map, marker);
+                });
+            }
+        </script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw1M2-K35n6bwm1JoCM7YHdb-dnRoRfhg&callback=initMap">
+        </script>
         
     </body>
 </html>
