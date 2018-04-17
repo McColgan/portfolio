@@ -134,10 +134,17 @@
     color: #f3f3f3;
     -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    transition: 400ms;
+    opacity: 0;
+    //transform: translateX(-30px);
+    transform: translateY(-20px);
+    transition: 800ms ease-in;
     &:hover{
-        transform: translate(0, -7%);
+        //transform: translateY(10px);
         background: rgba(189, 0, 142, 1);
+    }
+    &.is-showing{
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
 .skill-box img{

@@ -22,11 +22,27 @@ $(document).ready(function(){
         }, 1500);
     });
 
+    
+
     //Parallax 
     function parallax(){
+        //var parentContainerHeight = $('.showcase').height();
         var wScroll = $(window).scrollTop();
-        $('.box-text-outer').css('top',-(wScroll * 0.02)+'em');
-        $('.profile-img').css('top',(wScroll * 0.07)+'em');
+
+        //if(wScroll <= parentContainerHeight){
+            $('.box-text-outer').css('top',-(wScroll * 0.02)+'em');
+            $('.profile-img').css('top',(wScroll * 0.07)+'em');
+
+            if(wScroll > $('.skills-flexbox').offset().top - ($(window).height() / 1.7)){
+                $('.skill-box').each(function(i){
+
+                    setTimeout(function(){
+                    
+                        $('.skill-box').eq(i).addClass('is-showing');
+                    }, (700 * (Math.exp(i * 0.14))) - 400);
+                });
+            }
+        
     }
     $(window).scroll(function(){
         parallax();
