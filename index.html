@@ -10,9 +10,6 @@
         <link rel="stylesheet" href="css/main.css">
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="scripts/scripts.js" async></script>
-        <script type="text/javascript" src="scripts/typing.js" async></script>
-        <script type="text/javascript" src="scripts/slider.js" async></script>
     </head>
     <body>
         <!-- NAV -->
@@ -39,24 +36,41 @@
             </div>
         </header>
 
+        <!-- HERO -->
+        <section class="hero" id="Top">
+            <!-- <div class="typing-text-box">
+                <h1 class="typing-text" data-target-resolver></h1>
+            </div> -->
+            <div id="hero-text">L.M</div>
+            <div class="hero-container">
+                <div id="hero-item1"></div>
+                <div id="hero-item2"></div>
+                <div id="hero-item3"></div>
+                <div id="hero-item4"></div>
+                <div id="hero-item5"></div>
+            </div>
+            <a class="scroll" href="#Intro"><div class="down-arrow bounce"></div></a>
+        </section>
+        
         <!-- SHOWCASE -->
-        <section class="showcase" id="Top">
+        <section class="showcase" id="Intro">
             <div class="showcase-outer">
+                <div class="showcase-textbox">
+                    <p><span class="inline-text-background">"I love using my passion for coding, design, and UX to enable people to connect to the World via the power of HTML, CSS and JavaScript..."</span></p>
+                </div>
                 <div class="profile-img"></div>
                 <div class="color-layer"></div>
-                <div class="video-outer">
+                <!-- <div class="video-outer">
                     <video src="../images/White-Keyboard.mp4" autoplay="true" loop="true"></video>
-                </div>
-                <div class="typing-text-outer">
-                    <h1 class="typing-text" data-target-resolver></h1>
-                </div>
+                </div> -->
+                
                 <h1 class="name-text"><span class="stop-color">l</span><span class="font-size-big">iam</span><br><span class="stop-color">m</span><span class="font-size-big">ccolgan</span><br>.<span class="stop-color">c</span><span class="font-size-big">om</span></h1>
-                <a class="scroll" href="#Intro"><div class="down-arrow bounce"></div></a>
+                
             </div>
         </section>
 
         <!-- INTRO -->
-        <section class="intro" id="Intro">
+        <section class="intro">
             <div class="intro-outer">
                 
                 <p class="intro-text"><span class="intro-h1">Hello.</span><br><br>Liam McColgan is a UK based Designer who loves to help people connect their business and passions through the power of the internet.<br><br>
@@ -184,7 +198,7 @@
                     <div class="skill-box">
                         <img src="/images/hexagon.png" alt="skill">
                         <div class="skill-box-content">
-                            <p class="box">IOS</p>
+                            <p class="box">macOS</p>
                             <div class="skill-icon ios-icon"></div>
                         </div>
                     </div>
@@ -218,6 +232,14 @@
                     <div class="handle"></div>
             </div>
             
+        </section>
+
+        <!-- BALLOONS SECTION-->
+        <section class="balloons-outer">
+            <div class="balloon1"></div>
+            <div class="balloon2"></div>
+            <div class="balloon3"></div>
+            <div class="balloon4"></div>
         </section>
 
         <!-- CONTACT -->
@@ -283,7 +305,10 @@
 
 
 
-
+        <script type="text/javascript" src="scripts/scripts.js" async></script>
+        <script type="text/javascript" src="scripts/typing.js" async></script>
+        <script type="text/javascript" src="scripts/slider.js" async></script>
+        <script type="text/javascript" src="scripts/balloons.js" async></script>
         <script>
             function initMap(){
                 // Map options //

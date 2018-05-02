@@ -136,11 +136,12 @@
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     opacity: 0;
     //transform: translateX(-30px);
+    transition: all 800ms ease-in,
+                background-color 400ms;
     transform: translateY(-20px);
-    transition: 800ms ease-in;
     &:hover{
-        //transform: translateY(10px);
-        background: rgba(189, 0, 142, 1);
+        //transform: translateY(-10px);
+        background-color: rgba(189, 0, 142, 1);
     }
     &.is-showing{
         opacity: 1;

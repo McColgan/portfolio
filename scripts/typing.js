@@ -7,11 +7,11 @@ $(document).ready(function(){
     
         function getRandomInteger(min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
-        };
+        }
     
         function randomCharacter(characters) {
             return characters[getRandomInteger(0, characters.length - 1)];
-        };
+        }
     
         function doRandomiserEffect(options, callback) {
             var characters = options.characters;
@@ -38,7 +38,7 @@ $(document).ready(function(){
                 callback();
             }
             }, options.timeout);
-        };
+        }
     
         function doResolverEffect(options, callback) {
             var resolveString = options.resolveString;
@@ -56,7 +56,7 @@ $(document).ready(function(){
                 callback();
             }
             });
-        };
+        }
     
         doResolverEffect(combinedOptions, callback);
         }
@@ -64,16 +64,16 @@ $(document).ready(function(){
         /* Some GLaDOS quotes from Portal 2 chapter 9: The Part Where He Kills You
         * Source: http://theportalwiki.com/wiki/GLaDOS_voice_lines#Chapter_9:_The_Part_Where_He_Kills_You
         */
-    };var strings = ['Hi i\'m Liam...','I love using my passion for coding, design, and UX to enable people to connect to the World via the power of <HTML>, {CSS} and (JavaScript)...'];
+    };var strings = ['\"Hi\, i\'m Liam...\"','\"I love to code\"','\"I\'m passionate about design\"','\"I use web technologies to execute peoples ideas\"'];
     var counter = 0;
     
     var options = {
         // Initial position
         offset: 0,
         // Timeout between each random character
-        timeout: 5,
+        timeout: 3,
         // Number of random characters to show
-        iterations: 8,
+        iterations: 12,
         // Random characters to pick from
         characters: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'x', 'y', 'x', '#', '%', '&', '-', '+', '_', '?', '/', '\\', '='],
         // String to resolve
