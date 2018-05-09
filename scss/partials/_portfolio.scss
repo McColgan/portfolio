@@ -179,6 +179,13 @@
 
 
 // MEDIA QUERIES //
+@media (min-width: 1500px){
+    #wrapper,
+    .layer,
+    .layer .content-wrap{
+        min-height: 50vw;
+    }
+}
 @media (max-width: 1200px){
     .portfolio-title{
         font-size: 4em;

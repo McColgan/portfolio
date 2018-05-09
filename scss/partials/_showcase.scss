@@ -20,18 +20,27 @@
     display: flex;
     align-items: center;
     p{
+        display: block;
         color: #f3f3f3;
         font-weight: 600;
         font-size: 2em;
         padding: 2em;
         width: 70%;
         line-height: 2em;
+        transition: 1200ms;
+        transition-timing-function: cubic-bezier(.75,-0.07,.93,.86);
+        transform: translateY(50px);
+        opacity: 0;
+        &.is-showing{
+            opacity: 1;
+            transform: translateY(0px);
+        }
     }
 }
 
 .inline-text-background{
-    background: rgba(39, 39, 39, 0.9);
-    box-shadow: 10px 0px 0px 0px rgba(39, 39, 39, 0.9), -10px 0px 0px 0px rgba(39, 39, 39, 0.9);
+    background: #272727;
+    box-shadow: 10px 0px 0px 0px #272727, -10px 0px 0px 0px #272727;
 }
 // PROFILE IMAGE //
 .profile-img{
@@ -72,7 +81,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: #272727;
 }
 
 // BACKGROUND VIDEO //

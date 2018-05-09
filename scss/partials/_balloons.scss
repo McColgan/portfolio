@@ -10,21 +10,37 @@
     background-image: url(../images/balloons-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    //background-attachment: fixed;
 }
 .balloons-container{
     position: relative;
     width: 80vw;
     min-height: 40vw;
-    background-image: url(../images/balloons-bg.png);
+    /* background-image: url(../images/balloons-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
-    padding: 0;
+    padding: 0; */
+    border-radius: 300px;
+    box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.8);
     margin: 4em auto;
-    box-shadow: inset 0px 0px 20px #000;
     overflow: hidden;
     //background-attachment: fixed;
+
+}
+.balloons-container-img{
+    position: absolute;
+    width: 80vw;
+    height: 90VW;
+    background-image: url(../images/balloons-bg.png);
+    background-size: cover;
+    transform: translateY(1000px);
+    //border: inset 5px solid #000;
+    z-index: -1;
+    //border-radius: 200px;
+    background-repeat: no-repeat;
+    //background-position: top;
+    //padding: 0;
 }
 
 .balloon1{
@@ -36,7 +52,7 @@
     background-size: 180px 229px;
     background-repeat: no-repeat;
     left: 20%;
-    transform: translate(0px, 1350px);
+    transform: translate(0px, -820px);
     //bottom: 0;
     //top: 50%;
     
@@ -52,7 +68,7 @@
     background-repeat: no-repeat;
     right: 10%;
     top: 80px;
-    transform: translate(0px, 400px);
+    transform: translate(0px, -1500px);
     z-index: 3;
 }
 .balloon3{
@@ -66,7 +82,7 @@
     right: 22%;
     top: 20px;
     //transform: translateX(-50%);
-    transform: translate(0px, -300px);
+    transform: translate(0px, -800px);
 }
 .balloon4{
     position: absolute;
@@ -78,7 +94,7 @@
     background-repeat: no-repeat;
     right: 38%;
     top: 55%;
-    transform: translate(0px, -100px);
+    transform: translate(0px, 1000px);
 }
 
 
@@ -87,65 +103,85 @@
 // 1700px +
 @media (min-width: 1700px){
     .balloon1{
-        transform: translate(0px, 1700px);
+        transform: translate(0px, -850px);
+
     }
 }
 
 // MAX 1500px //
 @media (max-width: 1500px){
+    .balloons-container-img{
+        transform: translateY(950px);
+    }
     .balloon1{
-        transform: translate(0px, 1500px);
+        transform: translate(0px, -850px);
     }
     .balloon3{
-        transform: translate(0px, -350px);
+        transform: translate(0px, -850px);
     }
     .balloon4{
-        transform: translate(0px, -150px);
+        transform: translate(0px, 800px);
     }
 }
 
 // MAX 1300px //
 @media (max-width: 1300px){
+    .balloons-container-img{
+        transform: translateY(950px);
+    }
     .balloon1{
-        transform: translate(0px, 1350px);
+        transform: translate(0px, -750px);
+        background-size: 120px 153px;
     }
     .balloon2{
-        transform: translate(0px, 350px);
+        background-size: 45px 61px;
+        transform: translate(30px, -1380px);
     }
     .balloon3{
-        transform: translate(0px, -400px);
+        transform: translate(0px, -750px);
+        background-size: 35px 44px;
     }
     .balloon4{
-        transform: translate(0px, -200px);
+        transform: translate(0px, 750px);
+        background-size: 25px 31px;
     }
 }
 
 // MAX 1050px //
 @media (max-width: 1050px){
+    .balloons-container-img{
+        transform: translateY(900px);
+    }
     .balloon1{
+        transform: translate(0px, -700px);
         background-size: 120px 153px;
     }
     .balloon2{
         background-size: 45px 61px;
+        transform: translate(30px, -1320px);
     }
     .balloon3{
+        transform: translate(0px, -720px);
         background-size: 35px 44px;
-        transform: translate(0px, -350px);
     }
     .balloon4{
+        transform: translate(0px, 650px);
         background-size: 25px 31px;
     }
 }
 
 // MAX 840px //
 @media (max-width: 840px){
+    balloons-container-img{
+        transform: translateY(850px);
+    }
     .balloon1{
         background-size: 80px 102px;
-        transform: translate(0px, 1200px);
+        //transform: translate(0px, 1200px);
     }
     .balloon2{
         background-size: 35px 47px;
-        transform: translate(20px, 280px)
+        //transform: translate(20px, 280px)
     }
     .balloon3{
         background-size: 25px 31px;
@@ -157,16 +193,7 @@
 
 @media (max-width: 750px){
     .balloon1{
-        transform: translate(0px, 1300px);
-    }
-    .balloon2{
-        transform: translate(40px, 250px);
-    }
-    .balloon3{
-        transform: translate(0px, -370px);
-    }
-    .balloon4{
-        transform: translate(0px, -250px);
+        transform: translate(0px, -800px);
     }
 }
 
@@ -174,49 +201,62 @@
     .balloons-container{
         width: 100vw;
         margin: 0;
-        height: 500px;
+        height: 550px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .balloons-container-img{
+        width: 100%;
+        height: 150vh;
+        transform: translateY(1000px);
     }
     .balloon1{
-        transform: translate(0px, 1400px);
+        transform: translate(0px, -800px);
     }
     .balloon2{
-        transform: translate(40px, 300px);
+        transform: translate(30px, -1420px);
     }
     .balloon3{
-        transform: translate(0px, -400px);
+        transform: translate(0px, -820px);
     }
     .balloon4{
-        transform: translate(0px, -250px);
+        transform: translate(0px, 800px);
     }
 }
 
 @media (max-width: 540px){
+    .balloons-container{
+        height: 450px;
+    }
     .balloon1{
-        transform: translate(0px, 1500px);
+        transform: translate(-30px, -850px);
     }
     .balloon2{
-        transform: translate(40px, 350px);
+        transform: translate(90px, -1470px);
     }
     .balloon3{
-        transform: translate(0px, -350px);
+        transform: translate(40px, -870px);
     }
     .balloon4{
-        transform: translate(0px, -250px);
+        transform: translate(20px, 750px);
     }
 }
 
 @media (max-width: 480px){
+    .balloons-container{
+        height: 400px;
+    }
     .balloon1{
-        transform: translate(-20px, 1400px);
+        transform: translate(-30px, -850px);
     }
     .balloon2{
-        transform: translate(90px, 300px);
+        transform: translate(90px, -1470px);
     }
     .balloon3{
-        transform: translate(30px, -400px);
+        transform: translate(40px, -840px);
     }
     .balloon4{
-        transform: translate(20px, -250px);
+        transform: translate(20px, 650px);
     }
 }
 
