@@ -172,28 +172,45 @@
 
 // MAX 840px //
 @media (max-width: 840px){
-    balloons-container-img{
+    .balloons-container-img{
         transform: translateY(850px);
     }
     .balloon1{
         background-size: 80px 102px;
-        //transform: translate(0px, 1200px);
+        transform: translate(0px, -800px);
     }
     .balloon2{
         background-size: 35px 47px;
-        //transform: translate(20px, 280px)
+        transform: translate(20px, -1450px)
     }
     .balloon3{
         background-size: 25px 31px;
+        transform: translate(0px, -780px);
     }
     .balloon4{
         background-size: 20px 25px;
+        transform: translate(0px, 590px);
     }
 }
 
 @media (max-width: 750px){
+    .balloons-container-img{
+        transform: translateY(1000px);
+    }
     .balloon1{
-        transform: translate(0px, -800px);
+        transform: translate(0px, -850px);
+        
+    }
+    .balloon2{
+        transform: translate(30px, -1500px);
+    }
+    .balloon3{
+        transform: translate(0px, -850px);
+        
+    }
+    .balloon4{
+        transform: translate(0px, 600px);
+       
     }
 }
 

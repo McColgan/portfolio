@@ -4,12 +4,14 @@ $(document).ready(function(){
     $('#nav-icon').click(function(){
         $('.nav-outer').toggleClass('nav-outer--open', 400);
         $(this).toggleClass('open');
-        $('.home-nav').fadeTo(300, 1);
-        $('.intro-nav').fadeTo(500, 1);
-        $('.skills-nav').fadeTo(700, 1);
-        $('.portfolio-nav').fadeTo(900, 1);
-        $('.contact-nav').fadeTo(1100, 1);
-
+        
+        if ($('.nav-outer').has('nav-outer--open')){
+            $('.nav-outer a').each(function(i){
+                setTimeout(function(){
+                    $('.nav-outer a').eq(i).addClass('is-showing');
+                }, 200 * (i+1));
+            });
+        } 
         return false;
     });
 
@@ -24,31 +26,33 @@ $(document).ready(function(){
 
     
 
-    //Parallax 
+    //Parallax / Scroll events
     function parallax(){
         //var parentContainerHeight = $('.showcase').height();
         var wScroll = $(window).scrollTop();
 
         //if(wScroll <= parentContainerHeight){
+
         $('.box-text-outer').css('top',-(wScroll * 0.02)+'em');
         $('.profile-img').css('top',(wScroll * 0.035)+'em');
 
-        if(wScroll > $('.skills-flexbox').offset().top - ($(window).height() / 1.7)){
+        // Skill-box fade in
+        if(wScroll > $('.skills-flexbox').offset().top - ($(window).height() / 1.4)){
             $('.skill-box').each(function(i){
                 setTimeout(function(){
                     $('.skill-box').eq(i).addClass('is-showing');
                 }, 250 * (i+1));
                 });
         }
-
+        // Intro fade in 
         if(wScroll > $('.intro-outer').offset().top - ($(window).height() / 2)){
             $('.intro-text').addClass('is-showing');    
         }
-
+        // Showcase fade in
         if(wScroll > $('.showcase-outer').offset().top - ($(window).height() / 2)){
             $('.showcase-textbox p').addClass('is-showing');    
         }
-
+        // intro li fade in
         if(wScroll > $('.intro-outer').offset().top - ($(window).height() / 5)){
             $('.box-text-outer li').each(function(i){
                 setTimeout(function(){

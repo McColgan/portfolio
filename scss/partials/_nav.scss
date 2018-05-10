@@ -71,15 +71,19 @@
                 width: 60%;
                 font-family: 'Poppins',sans-serif;
                 font-weight: 600;
-                transition: 0.8s;
                 letter-spacing: 0.5em;
-            }
-            .home-nav,
-            .intro-nav,
-            .skills-nav,
-            .portfolio-nav,
-            .contact-nav{
+                transition: 400ms;
+                transition-timing-function: cubic-bezier(.75,-0.07,.93,.86);
+                transform: translateY(-20px);
                 opacity: 0;
+                //transition: 350ms ease-in-out;
+                &.is-showing{
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+                &:hover{
+                    transform: translate(0px, -10px);
+                }
             }
         }
     }
@@ -101,7 +105,8 @@
 .nav-outer a:hover{
     border: 0px solid rgba(8, 8, 8, 0);
     color: #3CDA0D;
-    transform: translateY(-25%);
+    
+    
 }
 .nav-outer a::before,
 .nav-outer a::after{
@@ -185,13 +190,12 @@
                     width: auto;
                     font-size: 0.7em;
                     background: #272727;
-                }
-                .home-nav,
-                .intro-nav,
-                .skills-nav,
-                .portfolio-nav,
-                .contact-nav{
+                    transition: 350ms ease-in;
                     opacity: 1;
+                    transform: translateY(0px);
+                    &:hover{
+                        transform: translateY(-10px);
+                    }
                 }
             }
         }
