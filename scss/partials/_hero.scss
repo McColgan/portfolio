@@ -142,54 +142,15 @@
         top: 10.65em;
         box-shadow: none;
         background-size: 1150px 863px;
-        background-position: -806px -219.5px;
+        background-position: -806px -220px;
         //filter: blur(0px);
         background-image: url(../images/hero-bg-color.png);
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-// TYPING TEXT //
-
-/* .typing-text-box{
-    font-size: 1.4em;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    position: absolute;
-    //transform: rotate(-90deg);
-    text-align: left;
-    width: 20%;
-    //left: 2em;
-    top: 4em;
-    //display: flex;
-    //justify-content: center;
-    //bottom: 20%;
-    //padding: 1em;
-    //background: burlywood;
-    //align-items: center;
-}
-.typing-text{
-    //margin: 1em;
-    //padding: 1em;
-    width: 100%;
-    color: #f3f3f3;
-    height: auto;
-    text-align: start;
-} */
-
 // DOWN ARROW //
 .down-arrow{
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     width: 100px;
     height: 100px;
@@ -202,8 +163,6 @@
     z-index: 5;
     left: 0; 
     right: 0; 
-    margin-left: auto; 
-    margin-right: auto;
     transition: 500ms ease-in-out;
     &:hover{
         background-image: url(../images/down-arrow-white.png);
@@ -229,7 +188,75 @@
   }
 
   // MEDIA QUERIES //
-@media (max-width: 1030px){
+@media (max-width: 1200px){
+    .hero-container{
+        height: 450px;
+        width: 750px;
+        //background-image: url(../images/hero-bg-color.png);
+        background-size: cover; 
+    }
+    #hero-text{
+        font-size: 20em;top: 70%;
+    }
+    #hero-item1{
+        height: 180px;
+        width: 130px; 
+        top: 9em;
+        background-image: url(../images/hero-bg-black.png);
+        background-size: 975px 732px;
+        background-position: -30px -250px;
+        &:hover{
+            top: 10.665em;
+            background-size: 862px 647px;
+            background-position: -56.5px -220px;
+        }
+    }
+    #hero-item2{
+        height: 375px;
+        width: 300px;
+        top: 5.3em;
+        left: 2em;
+        background-size: 862px 647px;
+        background-position: -88px -134px;
+        z-index: 1;
+    }
+    #hero-item3{
+        height: 475px;
+        width: 300px;
+        top: 0;
+        left: 14em;
+        background-size: 975px 732px;
+        background-position: -300px -105px;
+        box-shadow: 0px 0px 20px 5px #3CDA0D;
+        &:hover{
+            top: 0.66em;
+            background-size: 862px 647px;
+            background-position: -280px -60px;
+        }
+    }
+    #hero-item4{
+        height: 375px;
+        width: 300px;
+        top: 2.55em;
+        left: 24em;
+        background-size: 862px 647px;
+        background-position: -440px -90px;
+    }
+    #hero-item5{
+        height: 225px;
+        width: 165px;
+        top: 10em;
+        right: 0;
+        background-size: 975px 732px;
+        background-position: -685px -267px;
+        &:hover{
+            top: 10.65em;
+            background-size: 862px 647px;
+            background-position: -641px -220px;
+        }
+    }
+}  
+@media (max-width: 800px){
     .hero-container{
         width: 100vw;
         height: 100vh;
@@ -242,32 +269,38 @@
     #hero-text{
         font-size: 13em;
         top: 2.07em;
-        &::before{
-            content: '';
-            display: block;
-            position: absolute;
-            width: 200px;
-            height: 20px;
-            //background: rgba(61, 218, 13, 0.3);
-            //background-clip: border-box;
-            box-shadow: inset 0px 0px 0px 20px rgba(61, 218, 13, 0.3);
-            top: 1.3em;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 5;
-        }
     }
     #hero-item1,
     #hero-item2,
-    #hero-item3,
     #hero-item4,
     #hero-item5{
         display: none;
     }
-}
-
-@media (min-width: 850px){
-    .hero-container{
-        background-position: top center;
+    #hero-item3{
+        height: 330px;
+        width: 55%;
+        top: 5em;
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: url(../images/hero-bg-black.png);
+        background-size: 862px 647px;
+        background-position: top -6em center;
+        z-index: 3;
+        box-shadow: 0px 0px 30px 3px #3CDA0D;
+        pointer-events: none;
+    }
+    .down-arrow{
+        margin: 0 auto;
+        padding: 0;
+        width: 70px;
+        height: 70px;
+        background-size: 70px 70px;
+        position: absolute;
+        bottom: 2em; 
+        z-index: 5;
+        left: 0; 
+        right: 0;
     }
 }
+
+

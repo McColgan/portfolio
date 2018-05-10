@@ -115,11 +115,19 @@
     z-index: 1;
     height: 100%;
     width: 40%;
-    
     float: right;
     text-align: right;
     color: #3CDA0D;
-    line-height: 2.5em;   
+    line-height: 2.5em; 
+    transition: 1000ms;
+        transition-timing-function: cubic-bezier(.75,-0.07,.93,.86);
+        transition-delay: 1000ms;
+        transform: translateX(100px);
+        opacity: 0;
+        &.is-showing{
+            opacity: 1;
+            transform: translateX(0px);
+        }  
 }
 
 
@@ -223,10 +231,5 @@
         //right: 0.7em;
         line-height: 4em;
         padding: 1em 0 1em 0;
-    }
-    
-    .down-arrow{
-        clear: bottom;
-        top: 30em;
     }
 }

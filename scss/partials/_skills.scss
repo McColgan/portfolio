@@ -92,10 +92,11 @@
         bottom: 0;
         left: 0;
         background: rgba(189, 0, 142, 0.4);
+        //background: rgba(39, 39, 39, 0.9);
     }
 }
 .techSkills-bg{
-    background-image: url(../images/techSkills-bg.jpg);
+    background-image: url(../images/techSkills-bg1.jpeg);
     &::after{
         content: 'Technical Skills.';
         position: absolute;
@@ -130,7 +131,7 @@
     width: 150px;
     height: 160px;
     margin: 0.5em;
-    background: rgba(155, 0, 116, 0.45);
+    background: rgba(155, 0, 116, 0.5);
     color: #f3f3f3;
     -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -138,12 +139,14 @@
     //transform: translateX(-30px);
     //transition: all 800ms ease-in,
                 //background-color 800ms;
-    transition: 1000ms,
-                background-color 350ms;
+    transition: 1300ms,
+                margin-top 300ms,
+                background-color 300ms;
+
     transition-timing-function: cubic-bezier(.75,-0.07,.93,.86);
     transform: translateY(-50px);
     &:hover{
-        //transform: translateY(-10px);
+        margin-top: -8px;
         background-color: rgba(189, 0, 142, 1);
     }
     &.is-showing{
@@ -152,7 +155,13 @@
     }
 }
 .skill-box img{
-    width: 100%;
+    position: absolute;
+    width: 152px;
+    height: 162px;
+    left: 50%;
+    transform: translateX(-50%);
+    //top: 1px;
+    z-index: 3;
 }
 .skill-box-content{
     padding: 0;
@@ -169,7 +178,8 @@
     p{
         position: relative;
         font-weight: 400;
-        font-size: 0.9em;
+        font-size: 0.8em;
+        letter-spacing: 0.08em;
         text-align: center;
         padding: 1em 1.5em 0 1.5em;
     }
