@@ -7,6 +7,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: row;
+    z-index: 1;
 }
 .showcase-textbox{
     position: relative;
@@ -15,22 +16,33 @@
     right: 0;
     //padding: 1em;
     //background: #3CDA0D;
-    background: rgba(61, 218, 13, 0.9);
+    //background: #3CDA0D;
     z-index: 2;
     display: flex;
     align-items: center;
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #3CDA0D;
+        
+    }
+    //box-shadow: inset 0 0 30px 5px #272727;
     p{
         display: block;
         color: #f3f3f3;
         font-weight: 600;
         font-size: 2em;
         padding: 2em;
-        width: 70%;
+        width: 60%;
         line-height: 2em;
         transition: 1200ms;
         transition-timing-function: cubic-bezier(.75,-0.07,.93,.86);
-        transform: translateY(50px);
+        transform: translateY(100px);
         opacity: 0;
+        z-index: 3;
         &.is-showing{
             opacity: 1;
             transform: translateY(0px);
@@ -49,33 +61,29 @@
     z-index: 2;
     width: 280px;
     height: 280px;
-    background: rgba(61, 218, 13, 1);
+    background-image: url(../images/profile-img.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     left: 55%;
     transform: translate(-50%, -700px);
     -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    //border: 3px solid #f3f3f3;
     margin: 28em 0 0 0;
-}
-.profile-img:after{
-    content: '';
-    width: 265px;
-    height: 265px;
-    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    display: block;
-    position: absolute;
-    top: 7.5px;
-    left: 7.5px;
-    background-image: url(../images/profile-img.jpeg);
-    background-size: 280px 373px;
-    background-repeat: no-repeat;
-    background-position: center;
+    img{
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        bottom: 0;
+    }
 }
 
 // DARK COLOR LAYER //
 .color-layer{
-    z-index: 1;
+    z-index: 0;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -119,10 +127,10 @@
     text-align: right;
     color: #3CDA0D;
     line-height: 2.5em; 
-    transition: 1000ms;
+    transition: 1200ms;
         transition-timing-function: cubic-bezier(.75,-0.07,.93,.86);
         transition-delay: 1000ms;
-        transform: translateX(100px);
+        transform: translateX(150px);
         opacity: 0;
         &.is-showing{
             opacity: 1;
@@ -134,15 +142,15 @@
 // FONT SIZE LARGE //
 .font-size-big{
     font-size: 1.2em;
-    font-weight: 200;
+    font-weight: 300;
     //text-transform: uppercase;
 }
 
 // FULL STOP COLOR //
 .stop-color{
     color: #f3f3f3;
-    font-size: 1em;
-    font-weight: 700;
+    font-size: 1.5em;
+    font-weight: 900;
 }
 
 // MEDIA QUERIES //
@@ -158,14 +166,12 @@
     .profile-img{
         width: 330px;
         height: 330px;
+        img{
+            width: 330px;
+            height: 330px;
+        }
     }
-    .profile-img:after{
-        width: 315px;
-        height: 315px;
-        top: 7.5px;
-        left: 7.5px;
-        background-size: 330px 440px;
-    }
+    
     .showcase-textbox{
         p{
             font-size: 2.5em;
@@ -183,12 +189,13 @@
     .profile-img{
         width: 220px;
         height: 220px;
-    }
-    .profile-img:after{
-        width: 205px;
-        height: 205px;
         background-size: 220px 293px;
+        img{
+            width: 220px;
+            height: 220px;
+        }
     }
+    
     .showcase-textbox{
         p{
             font-size: 1.6em;
@@ -208,14 +215,13 @@
     .profile-img{
         width: 150px;
         height: 150px;
-    }
-    .profile-img:after{
-        width: 135px;
-        height: 135px;
-        top: 7.5px;
-        left: 7.5px;
         background-size: 150px 200px;
+        img{
+            width: 150px;
+            height: 150px;
+        }
     }
+    
 }
 @media (max-width: 480px){
     .showcase-textbox{

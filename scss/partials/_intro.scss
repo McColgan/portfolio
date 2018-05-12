@@ -50,6 +50,7 @@
         border-left: 1px solid #F46309;
         transition: 1200ms;
         transition-timing-function: cubic-bezier(.75,-0.07,.93,.86);
+        transition-delay: 3000ms;
         transform: translateY(50px);
         opacity: 0;
         &.is-showing{

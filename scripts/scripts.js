@@ -23,12 +23,23 @@ $(document).ready(function(){
         e.preventDefault();
         $('body,html').animate({
         scrollTop: $(this.hash).offset().top - $('.header-outer').outerHeight()
-        }, 1500);
+        }, 2000);
     });
 
+    // Link switching 
+    function linkSwitching(){
+        var scrollBarLocation = $(this).scrollTop();
+        scrollLink.each(function(){
+          var sectionOffset = $(this.hash).offset().top -140;
+          if (sectionOffset <= scrollBarLocation){
+            $(this).parent().addClass('activelink');
+            $(this).parent().siblings().removeClass('activelink');
+          }
+        });
+    }
     
 
-    //Parallax / Scroll events
+    // Parallax / Scroll events
     function parallax(){
         //var parentContainerHeight = $('.showcase').height();
         var wScroll = $(window).scrollTop();
@@ -47,9 +58,15 @@ $(document).ready(function(){
                 });
         }
         // Intro fade in 
-        if(wScroll > $('.intro-outer').offset().top - ($(window).height() / 2)){
-            $('.intro-text').addClass('is-showing');    
+        if(wScroll > $('.intro-outer').offset().top - ($(window).height() / 1.3)){
+            $('.intro-text').addClass('is-showing');
+                
         }
+        if(wScroll > $('.intro-outer').offset().top - ($(window).height() / 5)){
+            $('.intro-h1').addClass('is-showing');
+                
+        }
+         
         // Showcase fade in
         if(wScroll > $('.showcase-outer').offset().top - ($(window).height() / 2)){
             $('.showcase-textbox p').addClass('is-showing');
@@ -63,7 +80,9 @@ $(document).ready(function(){
                 }, 250 * (i+1));
                 });
         }
-        
+        if(wScroll > $('.hero').offset().top - $(window).height()){
+            $('.hero-mobile-bg').css('top',(wScroll * 0.7 )+'px');
+        }
 
         
 
@@ -92,7 +111,7 @@ $(document).ready(function(){
     $(window).scroll(function(){
         parallax();
         balloons();
-        //linkSwitching();
+        linkSwitching();
         //fadeOut();
         
         
