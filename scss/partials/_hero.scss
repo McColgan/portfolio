@@ -60,6 +60,9 @@
     transition: 350ms;
     transition-timing-function: cubic-bezier(.96,.25,.92,.63);
     //filter: blur(3px);
+    animation: 1000ms cubic-bezier(.96,.25,.92,.63) 500ms normal forwards 1 fadein;
+    -webkit-animation: 1000ms cubic-bezier(.96,.25,.92,.63) 500ms normal forwards 1 fadein;
+    opacity: 0;
     &:hover{
         top: 10.665em;
         box-shadow: none;
@@ -97,6 +100,9 @@
     box-shadow: 0px 0px 60px 10px #3CDA0D;
     transition: 350ms;
     transition-timing-function: cubic-bezier(.96,.25,.92,.63);
+    animation: 700ms cubic-bezier(.96,.25,.92,.63) 1250ms normal forwards 1 fadein3;
+    -webkit-animation: 700ms cubic-bezier(.96,.25,.92,.63) 1250ms normal forwards 1 fadein3;
+    opacity: 0;
     //filter: blur(3px);
     &:hover{
         top: 0.66em;
@@ -137,12 +143,15 @@
     transition: 350ms;
     transition-timing-function: cubic-bezier(.96,.25,.92,.63);
     background-repeat: no-repeat;
+    animation: 1000ms cubic-bezier(.96,.25,.92,.63) 1000ms normal forwards 1 fadein2;
+    -webkit-animation: 1000ms cubic-bezier(.96,.25,.92,.63) 1000ms normal forwards 1 fadein2;
+    opacity: 0;
     //filter: blur(3px);
     &:hover{
         top: 10.65em;
         box-shadow: none;
         background-size: 1150px 863px;
-        background-position: -806px -220px;
+        background-position: -806px -219.99px;
         //filter: blur(0px);
         background-image: url(../images/hero-bg-color.png);
     }
@@ -186,6 +195,57 @@
       transform: translateY(-15px);
     }
   }
+
+  // FADE IN KEYFRAMES//
+  @keyframes fadein{
+    0%{
+        opacity:0;
+        transform: translate(-20px, 30px);
+        transform: scale(1.3);
+    }
+    100%{
+        opacity:1;
+        transform: translate(0px, 0px);
+        transform: scale(1);
+    }
+  }
+  @keyframes fadein2{
+    0%{
+        opacity:0;
+        transform: translate(20px, -30px);
+        transform: scale(1.3);
+    }
+    100%{
+        opacity:1;
+        transform: translate(0px, 0px);
+        transform: scale(1);
+    }
+  }
+  @keyframes fadein3{
+    0%{
+        opacity:0;
+        transform: translate(0px, -20px);
+        transform: scale(1.3);
+    }
+    100%{
+        opacity:1;
+        transform: translate(0px, 0px);
+        transform: scale(1);
+    }
+  }
+  @keyframes fadein4{
+    0%{
+        opacity:0;
+        transform: translate(-50%, -20px);
+        //transform: scale(1.3);
+    }
+    100%{
+        opacity:1;
+        transform: translate(-50%, 0px);
+        //transform: scale(1);
+    }
+  }
+  
 
   // MEDIA QUERIES //
 @media (max-width: 1200px){
@@ -252,7 +312,7 @@
         &:hover{
             top: 10.65em;
             background-size: 862px 647px;
-            background-position: -641px -219px;
+            background-position: -641px -219.99px;
         }
     }
 }  
@@ -284,16 +344,18 @@
     }
     #hero-item3{
         height: 330px;
-        width: 55%;
+        width: 50%;
         top: 5em;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, 0px);
         background-image: url(../images/hero-bg-color.png);
         background-size: 862px 647px;
         background-position: top -6em center;
         z-index: 3;
         box-shadow: 0px 0px 30px 3px #3CDA0D;
         //pointer-events: none;
+        animation: 1000ms cubic-bezier(.96,.25,.92,.63) 500ms normal forwards 1 fadein4;
+        -webkit-animation: 1000ms cubic-bezier(.96,.25,.92,.63) 500ms normal forwards 1 fadein4;
         &:hover{
             top: 5.66em;
             //box-shadow: none;

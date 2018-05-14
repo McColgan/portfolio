@@ -111,55 +111,48 @@
     }
 } */
 
-
-
-
-// WEBSITE NAME TEXT //
-.name-text{
-    font-size: 3.3em;
-    font-family: 'Poppins',sans-serif;
-    font-weight: 300;
+// TYPING TEXT //
+.typing-text-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: auto;
+    background: #272727;
+    width: 45%;
     position: relative;
-    z-index: 1;
-    height: 100%;
-    width: 40%;
     float: right;
-    text-align: right;
-    color: #3CDA0D;
-    line-height: 2.5em; 
-    transition: 1200ms;
+    padding: 0;
+    .typing-textbox-static-h1{
+        text-align: center;
+        //background: #3CDA0D;
+        width: 100%;
+        height: 30%;
+        color: #3CDA0D;
+        font-size: 4em;
+        transition: 1200ms;
         transition-timing-function: cubic-bezier(.75,-0.07,.93,.86);
-        transition-delay: 1000ms;
-        transform: translateX(150px);
+        transition-delay: 500ms;
+        transform: translateX(50px);
         opacity: 0;
         &.is-showing{
             opacity: 1;
             transform: translateX(0px);
-        }  
-}
-
-
-// FONT SIZE LARGE //
-.font-size-big{
-    font-size: 1.2em;
-    font-weight: 300;
-    //text-transform: uppercase;
-}
-
-// FULL STOP COLOR //
-.stop-color{
-    color: #f3f3f3;
-    font-size: 1.5em;
-    font-weight: 900;
+        }
+    }
+    .typing-text{
+        font-size: 3em;
+        padding: 0;
+        height: 70%;
+        color: #3CDA0D;
+        //width: 80%;
+        padding: 0 4em;
+    }
 }
 
 // MEDIA QUERIES //
 @media (min-width: 1500px){
-    .name-text{
-        font-size: 4em;
-        //padding: 2em auto 2em auto;
-        //top: 1em;
-    }
+    
     .font-size-big{
         font-size: 1.7em;
     }
@@ -180,12 +173,17 @@
     }
 }
 @media (max-width: 1000px){
-    .name-text{
-        font-size: 3em;
-        line-height: 2.5em;
-        padding: 0.5em 0 0.5em 0;
-        //top: 6rem;
+    .typing-text-box{
+        .typing-textbox-static-h1{
+            font-size: 2.5em;
+            padding-top: 1em;
+        }
+        .typing-text{
+            font-size: 2em;
+            padding-top: 1em;
+        }
     }
+    
     .profile-img{
         width: 220px;
         height: 220px;
@@ -204,21 +202,27 @@
     }
 }
 @media (max-width: 730px){
-    
-    .name-text{
-        font-size: 2em;
-        //right: 1em;
-        //top: 10rem;
-        line-height: 3em;
-        padding: 2em 0 2em 0;
+    .typing-text-box{
+        
+        .typing-textbox-static-h1{
+            font-size: 2em;
+        }
+        .typing-text{
+            font-size: 1.5em;
+            justify-content: center;
+        }
     }
+    
     .profile-img{
         width: 150px;
         height: 150px;
         background-size: 150px 200px;
+        transform: translate(-50%, -600px);
+        opacity: 0.5;
         img{
             width: 150px;
             height: 150px;
+            opacity: 0.5;
         }
     }
     
@@ -227,15 +231,7 @@
     .showcase-textbox{
         p{
             font-size: 1em;
-            width: 70%;
+            width: 50%;
         }
-    }
-    
-    .name-text{
-        font-size: 1.5em;
-        //top: 10rem;
-        //right: 0.7em;
-        line-height: 4em;
-        padding: 1em 0 1em 0;
     }
 }

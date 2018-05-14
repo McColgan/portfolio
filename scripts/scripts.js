@@ -50,7 +50,7 @@ $(document).ready(function(){
         $('.profile-img').css('top',(wScroll * 0.035)+'em');
 
         // Skill-box fade in
-        if(wScroll > $('.skills-flexbox').offset().top - ($(window).height() / 1.4)){
+        if(wScroll > $('.skills-flexbox').offset().top - ($(window).height() / 1.2)){
             $('.skill-box').each(function(i){
                 setTimeout(function(){
                     $('.skill-box').eq(i).addClass('is-showing');
@@ -70,7 +70,7 @@ $(document).ready(function(){
         // Showcase fade in
         if(wScroll > $('.showcase-outer').offset().top - ($(window).height() / 2)){
             $('.showcase-textbox p').addClass('is-showing');
-            $('.name-text').addClass('is-showing');    
+            $('.typing-textbox-static-h1').addClass('is-showing');    
         }
         // intro li fade in
         if(wScroll > $('.intro-outer').offset().top - ($(window).height() / 8)){
@@ -112,7 +112,7 @@ $(document).ready(function(){
         parallax();
         balloons();
         linkSwitching();
-        //fadeOut();
+        
         
         
     });

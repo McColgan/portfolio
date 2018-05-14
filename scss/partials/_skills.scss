@@ -139,12 +139,12 @@
     //transform: translateX(-30px);
     //transition: all 800ms ease-in,
                 //background-color 800ms;
-    transition: 1300ms,
+    transition: 1000ms,
                 margin-top 300ms,
                 background-color 300ms;
 
     transition-timing-function: cubic-bezier(.75,-0.07,.93,.86);
-    transform: translateY(-50px);
+    transform: translateY(-20px);
     &:hover{
         margin-top: -8px;
         background-color: rgba(189, 0, 142, 1);

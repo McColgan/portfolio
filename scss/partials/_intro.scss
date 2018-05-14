@@ -50,7 +50,7 @@
         border-left: 1px solid #F46309;
         transition: 1200ms;
         transition-timing-function: cubic-bezier(.75,-0.07,.93,.86);
-        transition-delay: 3000ms;
+        //transition-delay: 3000ms;
         transform: translateY(50px);
         opacity: 0;
         &.is-showing{
@@ -148,7 +148,7 @@
 }
 @media (max-width: 680px){
     .intro-outer{
-        margin: 0 0 -30em 0;
+        margin: 0 0 -35em 0;
         .intro-text{
             width: 75%;
         }
