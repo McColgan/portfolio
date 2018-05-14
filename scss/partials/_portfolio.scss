@@ -138,6 +138,8 @@
 .yoga-link{
     left: 5%;
     bottom: 1em;
+    transition: 350ms;
+    transition-timing-function: cubic-bezier(.96,.25,.92,.63);
     &:hover{
         background: #272727;
         color: #3CDA0D;
@@ -150,6 +152,8 @@
     right: 5em;
     z-index: 3;
     clear: bottom;
+    transition: 350ms;
+    transition-timing-function: cubic-bezier(.96,.25,.92,.63);
     &:hover{
         background: #272727;
         border-color: #3CDA0D;

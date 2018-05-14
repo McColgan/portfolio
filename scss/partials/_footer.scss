@@ -69,7 +69,8 @@
     right: 0;
     box-sizing: border-box;
     transform: scale(0);
-    transition: 0.5s;
+    transition: 350ms;
+    transition-timing-function: cubic-bezier(.96,.25,.92,.63);
 }
 .email-a::before{
     border-bottom: 3px solid #3CDA0D;

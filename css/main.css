@@ -746,7 +746,8 @@ html, body {
     padding: 0;
     height: 70%;
     color: #3CDA0D;
-    padding: 0 4em; }
+    padding: 0 4em;
+    z-index: 3; }
 
 @media (min-width: 1500px) {
   .font-size-big {
@@ -1053,8 +1054,8 @@ html, body {
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   opacity: 0;
-  transition: 1000ms, margin-top 300ms, background-color 300ms;
-  transition-timing-function: cubic-bezier(0.75, -0.07, 0.93, 0.86);
+  transition: 1000ms, margin-top 350ms, background-color 350ms;
+  transition-timing-function: cubic-bezier(0.96, 0.25, 0.92, 0.63);
   transform: translateY(-20px); }
   .skill-box:hover {
     margin-top: -8px;
@@ -1356,7 +1357,9 @@ html, body {
 
 .yoga-link {
   left: 5%;
-  bottom: 1em; }
+  bottom: 1em;
+  transition: 350ms;
+  transition-timing-function: cubic-bezier(0.96, 0.25, 0.92, 0.63); }
   .yoga-link:hover {
     background: #272727;
     color: #3CDA0D;
@@ -1367,7 +1370,9 @@ html, body {
   top: 1em;
   right: 5em;
   z-index: 3;
-  clear: bottom; }
+  clear: bottom;
+  transition: 350ms;
+  transition-timing-function: cubic-bezier(0.96, 0.25, 0.92, 0.63); }
   .reframe-link:hover {
     background: #272727;
     border-color: #3CDA0D;
@@ -1790,7 +1795,8 @@ input {
   right: 0;
   box-sizing: border-box;
   transform: scale(0);
-  transition: 0.5s; }
+  transition: 350ms;
+  transition-timing-function: cubic-bezier(0.96, 0.25, 0.92, 0.63); }
 
 .submit-btn::before {
   border-bottom: 4px solid #3CDA0D;
@@ -1908,7 +1914,8 @@ input {
   right: 0;
   box-sizing: border-box;
   transform: scale(0);
-  transition: 0.5s; }
+  transition: 350ms;
+  transition-timing-function: cubic-bezier(0.96, 0.25, 0.92, 0.63); }
 
 .email-a::before {
   border-bottom: 3px solid #3CDA0D;
