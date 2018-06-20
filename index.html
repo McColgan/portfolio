@@ -5,7 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="keywords" content="Liam McColgan, Liam, portfolio, web design, web development, freelancer, liammccolgan.com">
-        <meta name="description" content="Designing the web | by Liam McColgan">
+        <meta name="twitter:description" content="The best thing about building a website from nothing is the ability to have an aubergine emoji as the shortcut/tab icon &#128579;">
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@McColgan_L" />
+        <meta name="twitter:creator" content="@McColgan_L" />
+        <meta name="twitter:image" content="http://liammccolgan.com/portfolio/images/hero-bg-color.png" />
+        <meta property="og:url" content="http://liammccolgan.com/Portfolio/" />
+        <meta property="og:title" content="Liam McColgan | Web Designer based in the shires of the UK" />
+        <meta property="og:description" content="The best thing about building a website from nothing is the ability to have an aubergine emoji as the shortcut/tab icon &#128579;" />
+        <meta property="og:site_name" content="liammccolgan.com"/>
+        <meta property="og:image" content="http://liammccolgan.com/portfolio/images/hero-bg-black.png" />
         <title>Web Design Portfolio| liammccolgan.com</title>
         <link rel="shortcut icon" type="image/png" href="images/aubergine-png-image.png_32x32.ico">
         <link rel="stylesheet" href="css/main.css">
@@ -58,7 +67,7 @@
         <section class="showcase" id="Intro">
             <div class="showcase-outer">
                 <div class="showcase-textbox">
-                    <p><span class="inline-text-background">"I love using my passion for coding, design, and UX to enable people to connect to the World via the power of the internet..."</span></p>
+                    <p><span class="inline-text-background">"My mission is to use my passion for coding, design, and UX to enable people to connect to the World via the power of the internet..."</span></p>
                 </div>
                 <div class="profile-img">
                         <img src="images/diamond.png">
@@ -80,21 +89,21 @@
         <section class="intro">
             <div class="intro-outer">
                 
-                <p class="intro-text"><span class="intro-h1">Hello.</span><br><br>Liam McColgan is a UK based Designer who loves to help people connect their business and passions through the power of the internet.<br><br>
-                He uses his ever expanding knowledge of HTML, CSS and Javascript to help his clients present their own vision and footprint on the web.<br><br>
+                <p class="intro-text"><span class="intro-h1">Hello.</span><br><br>I'm a UK based Designer helping people reach their business and passions to others through the power of the internet.<br><br>
+                Using my ever expanding knowledge of HTML, CSS and Javascript, I enable my clients to present their own vision and footprint on the web.<br><br>
                 Building websites for nearly a year, Liam has built upon core skills in Web Design; creating a foundation in which to explore and nurture the endless possibilities of an ever evolving industry.<br><br>
-                He believes in a life where work and play are forever intertwined.<br><br>
+                I pursue a life where work and play are forever intertwined. Blurring the lines of work and passion ultimately pushes you to become the best you can at what you do.<br><br>
                 To see and reach full potential, you must first have the passion, knowledge and confidence to realise and execute your ideas.<br><br>
-                As of 2018, he is designing and creating websites for local people and businesses who want a thoughtful, bespoke, user friendly site to gain web presence and ultimately customer turnover.</p>
+                As of 2018, I'm designing and creating websites for local people and businesses who want a thoughtful, bespoke, user friendly site to gain web presence and ultimately customer turnover.</p>
                 <div class="box-text-outer">
-                    <p class="box-text">When not retreated to his coding setup with lots of coffee he . . .</p>
+                    <p class="box-text">When i'm not retreated to my Dev space with lots of coffee i . . .</p>
                     <ul>
                         <li>Listens to music (RHCP, Deadmau5, Jamie Cullum to name a few) as well as playing piano and guitar.</li>
-                        <li>Watches Arsenal FC, a passion there is no escape from.</li>
-                        <li>A self described Freethinker, Humanist and advocate of a free, uncensored internet.</li>
-                        <li>Is an animal lover. Always beware of the cat's mission for world domination!</li>
-                        <li>Hates waiting.</li>
-                        <li>Is fueled by coffee, tea and Rioja.</li>
+                        <li>Watch and support Arsenal FC. #COYG</li>
+                        <li>Self describe as a Freethinker, Humanist and advocate of a free, uncensored internet.</li>
+                        <li>Am an animal lover. Always beware of the cat's mission for world domination!</li>
+                        <li>Continue the journey of learning JavaScript</li>
+                        <li>Am fueled by coffee, tea and Rioja.</li>
                     </ul>
                 </div>
             </div>
@@ -254,12 +263,15 @@
 
         <!-- CONTACT -->
         <section class="contact" id="Contact">
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
             
             <!-- <p class="contact-quote"><span class="quote-marks">"</span>There is only one corner of the Universe you can be certain of improving, and that's your own self.<span class="quote-marks">"</span><br>- Aldous Huxley</p> -->
             <div class="contact-flexbox">
-                <div id="map"></div>
+                <h1>Like to collaborate?<br>Or simply connect and discuss about all things web and design? Let's talk!</h1>
                 <div class="contact-box">
-                    <h1>Like to collaborate? Let's talk!</h1>
+                   
                     <table>
                         <form name="contactform" method="post" action="send_form_email.php">
                             <tr>
@@ -323,7 +335,7 @@
             function initMap(){
                 // Map options //
                 var options = {
-                    zoom:7 ,
+                    zoom:8 ,
                     center:{lat:52.57364,lng:-0.24777},
                     styles: [
                         {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
@@ -403,9 +415,23 @@
                         featureType: 'water',
                         elementType: 'labels.text.stroke',
                         stylers: [{color: '#17263c'}]
-                        }
-                    ]
-        
+                        },
+                    ],
+                    mapTypeControl: true,
+                    mapTypeControlOptions: {
+                        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                        position: google.maps.ControlPosition.LEFT_CENTER
+                    },
+                    zoomControl: true,
+                    zoomControlOptions: {
+                        position: google.maps.ControlPosition.LEFT_CENTER
+                    },
+                    scaleControl: true,
+                    streetViewControl: true,
+                    streetViewControlOptions: {
+                        position: google.maps.ControlPosition.LEFT_CENTER
+                    },
+                    
                 }
                 // New map //
                 var map = new google.maps.Map(document.getElementById('map'), options);

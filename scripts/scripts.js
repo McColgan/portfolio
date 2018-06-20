@@ -84,7 +84,11 @@ $(document).ready(function(){
             $('.hero-mobile-bg').css('top',(wScroll * 0.7 )+'px');
         }
 
-        
+        // Contact Parallax
+        if(wScroll > $('.contact').offset().top - ($(window).height())){
+            $('#map').css('top',(wScroll * 0.4 )+'px');
+                
+        }
 
         
     }
