@@ -34,8 +34,8 @@
         display: block;
         color: #f3f3f3;
         font-weight: 600;
-        font-size: 2em;
-        padding: 2em;
+        font-size: 1.5em;
+        padding: 4em 2em;
         width: 60%;
         line-height: 2em;
         transition: 1200ms;
@@ -92,25 +92,6 @@
     background: #272727;
 }
 
-// BACKGROUND VIDEO //
-/* .video-outer{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    z-index: 0;
-        video{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        min-width: 100vw;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: 0;
-    }
-} */
-
 // TYPING TEXT //
 .typing-text-box{
     //display: flex;
@@ -129,7 +110,7 @@
         width: 100%;
         height: 20%;
         color: #3CDA0D;
-        font-size: 4em;
+        font-size: 3em;
         transition: 1200ms;
         transition-timing-function: cubic-bezier(.75,-0.07,.93,.86);
         transition-delay: 500ms;
@@ -144,7 +125,7 @@
         //display: flex;
         float: right ;
         //flex-direction: row-reverse; 
-        font-size: 2em;
+        font-size: 1.5em;
         padding-right: 1em;
         //height: 70%;
         color: #3CDA0D;
@@ -170,11 +151,19 @@
             height: 330px;
         }
     }
-    
     .showcase-textbox{
         p{
-            font-size: 2.5em;
+            font-size: 2em;
             width: 70%;
+        }
+    }
+
+    .typing-text-box{
+        .typing-textbox-static-h1{
+            font-size: 4em;
+        }
+        .typing-text{
+            font-size: 2em;
         }
     }
 }

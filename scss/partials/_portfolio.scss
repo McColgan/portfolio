@@ -64,41 +64,41 @@
     margin: 0 auto;
     position: relative;
     width: 100%;
-    min-height: 60vw;
+    min-height: 50vw;
     overflow: hidden;
     border-top: 4px solid #3CDA0D;
-    border-bottom: 4px solid #3CDA0D; 
+    border-bottom: 4px solid #3CDA0D;     
 }
 .layer{
     padding: 0;
     margin: 0 auto;
     position: absolute;
     width: 100vw;
-    min-height: 60vw;
+    min-height: 50vw;
     overflow: hidden;
-    //background: cadetblue;
 }
-.layer .content-wrap{
+.content-wrap{
     position: absolute;
     width: 100vw;
-    min-height: 60vw;
+    min-height: 50vw;
     padding: 0;
     margin: 0 auto;
 }
+
 .layer .img1{
-    width: 60%;
+    width: 55%;
     position: absolute;
-    left: 5%;
+    left: 10%;
     top: 50%;
     transform: translateY(-50%);
     //text-align: center;
 }
 .layer .img2{
-    width: 45%;
+    width: 40%;
     position: absolute;
     top: 50%;
     left: 60%;
-    transform: translate(0, -50%);
+    transform: translateY(-50%);
 }
 .bottom-layer{
     background: #9241A8;
@@ -108,9 +108,7 @@
 .top-layer{
     background: #1599D6;
     z-index: 3;
-    width: 50%;
 }
-
 .handle{
     position: absolute;
     height: 100%;
@@ -124,7 +122,7 @@
 .website-link{
     z-index: 2;
     position: absolute;
-    font-size: 1.5em;
+    font-size: 1em;
     letter-spacing: 0.25em;
     color: #3CDA0D;
     text-decoration: none;
@@ -133,33 +131,27 @@
     font-weight: 400;
     transition: 300ms ease-in;
     margin: 1em auto;
-    
-}
-.yoga-link{
-    left: 5%;
-    bottom: 1em;
-    transition: 350ms;
-    transition-timing-function: cubic-bezier(.96,.25,.92,.63);
     &:hover{
         background: #272727;
-        color: #3CDA0D;
         border-color: #3CDA0D;
+        color: #3CDA0D;
         transform: translateY(-10%);
     }
 }
+.yoga-link{
+    left: 10%;
+    bottom: 1em;
+    transition: 350ms;
+    transition-timing-function: cubic-bezier(.96,.25,.92,.63);
+}
 .reframe-link{
     top: 1em;
-    right: 5em;
+    right: 9em;
     z-index: 3;
     clear: bottom;
     transition: 350ms;
     transition-timing-function: cubic-bezier(.96,.25,.92,.63);
-    &:hover{
-        background: #272727;
-        border-color: #3CDA0D;
-        color: #3CDA0D;
-        transform: translateY(-10%);
-    }
+    
 }
 
 .skewed .handle{
@@ -182,12 +174,12 @@
 
 
 
-// MEDIA QUERIES //
+ // MEDIA QUERIES //
 @media (min-width: 1500px){
     #wrapper,
     .layer,
     .layer .content-wrap{
-        min-height: 50vw;
+        min-height: 45vw;
     }
 }
 @media (max-width: 1200px){

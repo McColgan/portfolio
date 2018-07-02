@@ -1,101 +1,53 @@
 .balloons-outer{
     position: relative;
     width: 100%;
+    max-width: 1300px;
     height: auto;
     z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    margin: 0 auto;
     background-image: url(../images/balloons-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
-    //border-left: 4px solid #3CDA0D;
-    border-bottom: 4px solid #3CDA0D;
-    //border-right: 4px solid #3CDA0D;
     box-sizing: border-box;
-    //background-attachment: fixed;
+    border: 50px solid #272727;
 }
 .balloons-container{
     position: relative;
     width: 80vw;
-    max-width: 1200px;
-    min-height: 40vw;
-    //border-radius: 240px;
-    //-webkit-clip-path: polygon(0 0, 0 100%, 28% 100%, 28% 82%, 14% 82%, 14% 50%, 23% 50%, 37% 100%, 63% 100%, 76% 50%, 78% 50%, 78% 100%, 100% 100%, 100% 0, 65% 0, 50% 55%, 35% 0);
-    //clip-path: polygon(0 0, 0 100%, 28% 100%, 28% 82%, 14% 82%, 14% 50%, 23% 50%, 37% 100%, 63% 100%, 76% 50%, 78% 50%, 78% 100%, 100% 100%, 100% 0, 65% 0, 50% 55%, 35% 0);
-    box-shadow: inset 0px 0px 30px 7px #3CDA0D;
-    border: 5px solid #3CDA0D;
+    max-width: 1100px;
+    height: 35vw;
     margin: 4em auto;
     overflow: hidden;
-    &::before{
-        content: '';
-        position: absolute;
-        width: 70vw;
-        max-width: 1050px;
-        height: 80%;
-        box-sizing: border-box;
-        outline: 5px solid #3CDA0D;
-        box-shadow: inset 0px 0px 20px 2px #3CDA0D;
-        top: 50%;
-        right: 0;
-        bottom: 0;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    &::after{
-        content: '';
-        position: absolute;
-        width: 60vw;
-        max-width: 950px;
-        height: 60%;
-        box-sizing: border-box;
-        outline: 5px solid #3CDA0D;
-        box-shadow: inset 0px 0px 10px #3CDA0D;
-        top: 50%;
-        right: 0;
-        bottom: 0;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        
-    }
-
 }
 .balloons-container-img{
     position: absolute;
     width: 80vw;
-    height: 90VW;
+    height: 70vw;
     background-image: url(../images/balloons-bg.png);
     background-size: cover;
     transform: translateY(1000px);
-    //border: inset 5px solid #000;
     z-index: -1;
-    //border-radius: 200px;
     background-repeat: no-repeat;
-    //background-position: top;
-    //padding: 0;
 }
 
 .balloon1{
     position: absolute;
     width: 180px;
     height: 229px;
-    //background: rgba(30, 143, 255, 0.5);
     background-image: url(../images/balloon1.png);
     background-size: 180px 229px;
     background-repeat: no-repeat;
     left: 20%;
     transform: translate(0px, -820px);
-    //bottom: 0;
-    //top: 50%;
-    
     z-index: 4;
 }
 .balloon2{
     position: absolute;
     width: 167px;
     height: 224px;
-    //background: rgba(30, 143, 255, 0.5);
     background-image: url(../images/balloon2.png);
     background-size: 74px 101px;
     background-repeat: no-repeat;
@@ -108,20 +60,17 @@
     position: absolute;
     width: 107px;
     height: 135px;
-    //background: rgba(30, 143, 255, 0.5);
     background-image: url(../images/balloon3.png);
     background-size: 50px 63px;
     background-repeat: no-repeat;
     right: 22%;
     top: 20px;
-    //transform: translateX(-50%);
     transform: translate(0px, -800px);
 }
 .balloon4{
     position: absolute;
     width: 78px;
     height: 95px;
-    //background: rgba(30, 143, 255, 0.5);
     background-image: url(../images/balloon4.png);
     background-size: 35px 43px;
     background-repeat: no-repeat;
@@ -276,6 +225,9 @@
 }
 
 @media (max-width: 540px){
+    .balloons-outer{
+        border: 25px solid #272727;
+    }
     .balloons-container{
         height: 380px;
     }
