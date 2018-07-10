@@ -888,34 +888,36 @@ html, body {
     margin: 4em 0 0 0;
     padding: 2em;
     line-height: 1.5em;
-    font-weight: 600;
+    font-weight: 500;
     border-radius: 3px;
     transform: translateY(70%);
     -webkit-clip-path: polygon(5% 5%, 100% 0, 96% 94%, 0% 100%);
     clip-path: polygon(5% 5%, 100% 0, 96% 94%, 0% 100%); }
     .intro-outer .box-text-outer p {
       font-size: 1.2em;
-      padding: 0 0.4em;
+      padding: 0 3em;
       font-weight: 700;
       text-align: center; }
-    .intro-outer .box-text-outer li {
-      margin: 2em 0;
-      position: relative;
-      list-style: none;
-      transition: 800ms ease-in;
-      transform: translateY(50px);
-      opacity: 0; }
-      .intro-outer .box-text-outer li.is-showing {
-        opacity: 1;
-        transform: translateY(0px); }
-      .intro-outer .box-text-outer li::before {
-        content: '';
-        position: absolute;
-        left: -1.5em;
-        top: 0.3em;
-        width: 2px;
-        height: 15px;
-        background: #272727; }
+    .intro-outer .box-text-outer ul {
+      margin-top: 4em; }
+      .intro-outer .box-text-outer ul li {
+        margin: 2em 0;
+        position: relative;
+        list-style: none;
+        transition: 800ms ease-in;
+        transform: translateY(50px);
+        opacity: 0; }
+        .intro-outer .box-text-outer ul li.is-showing {
+          opacity: 1;
+          transform: translateY(0px); }
+        .intro-outer .box-text-outer ul li::before {
+          content: '';
+          position: absolute;
+          left: -1.5em;
+          top: 0.3em;
+          width: 2px;
+          height: 10px;
+          background: #272727; }
 
 @media (max-width: 900px) {
   .intro-outer .intro-h1 {

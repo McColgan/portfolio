@@ -67,7 +67,7 @@
         margin: 4em 0 0 0;
         padding: 2em;
         line-height: 1.5em;
-        font-weight: 600;
+        font-weight: 500;
         //box-shadow: inset 0px 0px 25px 2px rgba(0, 0, 0, 0.5);
         border-radius: 3px;
         transform: translateY(70%);
@@ -75,33 +75,37 @@
         clip-path: polygon(5% 5%, 100% 0, 96% 94%, 0% 100%);
         p{
             font-size: 1.2em;
-            padding: 0 0.4em;
+            padding: 0 3em;
             font-weight: 700;
             text-align: center;
         }
-        li{
-            margin: 2em 0;
-            position: relative;
-            list-style: none;
-            transition: 800ms ease-in;
-            //transition-delay: 1000ms;
-            //transition-timing-function: cubic-bezier(.75,-0.07,.93,.86);
-            transform: translateY(50px);
-            opacity: 0;
-            &.is-showing{
-                opacity: 1;
-                transform: translateY(0px);
+        ul{
+            margin-top: 4em;
+            li{
+                margin: 2em 0;
+                position: relative;
+                list-style: none;
+                transition: 800ms ease-in;
+                //transition-delay: 1000ms;
+                //transition-timing-function: cubic-bezier(.75,-0.07,.93,.86);
+                transform: translateY(50px);
+                opacity: 0;
+                //font-size: 0.9em;
+                &.is-showing{
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    left: -1.5em;
+                    top: 0.3em;
+                    width: 2px;
+                    height: 10px;
+                    background: #272727;
+                }
+                
             }
-            &::before{
-                content: '';
-                position: absolute;
-                left: -1.5em;
-                top: 0.3em;
-                width: 2px;
-                height: 15px;
-                background: #272727;
-            }
-            
         }
     }
 }
