@@ -7,13 +7,13 @@
     z-index: 1;
     position: relative;
     font-family: 'Poppins',sans-serif;
-    color: #3CDA0D;
+    color: $primary-color;
     letter-spacing: 0.2em;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border-top: 4px solid #3CDA0D;
+    border-top: 4px solid $primary-color;
     //position: fixed;
     //bottom: 0;
     //z-index: 0;
@@ -26,7 +26,7 @@
         //left: 1em;
         //top: 1.25em;
         width: auto;
-        border: 3px solid #3CDA0D;
+        border: 3px solid $primary-color;
         font-weight: 500;
         margin: 0 auto;
     }
@@ -38,7 +38,7 @@
         padding: 1.25em;
         text-transform: uppercase;
         text-decoration: none;
-        color: #3CDA0D;
+        color: $primary-color;
     }
 }
 
@@ -73,13 +73,13 @@
     transition-timing-function: cubic-bezier(.96,.25,.92,.63);
 }
 .email-a::before{
-    border-bottom: 3px solid #3CDA0D;
-    border-left: 3px solid #3CDA0D;
+    border-bottom: 3px solid $primary-color;
+    border-left: 3px solid $primary-color;
     transform-origin: 50% 50%;
 }
 .email-a::after{
-    border-top: 3px solid #3CDA0D;
-    border-right: 3px solid #3CDA0D;
+    border-top: 3px solid $primary-color;
+    border-right: 3px solid $primary-color;
     transform-origin: 50% 50%;
 }
 .email-a:hover::after,

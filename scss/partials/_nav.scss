@@ -90,7 +90,7 @@
             a{
                 position: relative;
                 font-weight: 300;
-                color: #3CDA0D;   
+                color: $primary-color;   
             }
         }
     }
@@ -102,7 +102,7 @@
 // NAV A HOVER EFFECT //
 .nav-outer a:hover{
     border: 0px solid rgba(8, 8, 8, 0);
-    color: #3CDA0D;
+    color: $primary-color;
     
     
 }
@@ -121,13 +121,13 @@
     transition-timing-function: cubic-bezier(.75,-0.07,.93,.86);
 }
 .nav-outer a::before{
-    border-bottom: 3px solid #3CDA0D;
-    border-left: 3px solid #3CDA0D;
+    border-bottom: 3px solid $primary-color;
+    border-left: 3px solid $primary-color;
     transform-origin: 50% 50%;
 }
 .nav-outer a::after{
-    border-top: 3px solid #3CDA0D;
-    border-right: 3px solid #3CDA0D;
+    border-top: 3px solid $primary-color;
+    border-right: 3px solid $primary-color;
     transform-origin: 50% 50%;
 }
 .nav-outer a:hover::after,
@@ -246,17 +246,17 @@
 }
 #nav-icon span:nth-child(1) {
     top: 9px;
-    background-color: #3CDA0D;
+    background-color: $primary-color;
     //border: 3px solid rgba(0, 112, 0, 0.8);
 }
 #nav-icon span:nth-child(2) {
     top: 24px;
-    background-color: #3CDA0D;
+    background-color: $primary-color;
     //border: 3px solid rgba(0, 112, 0, 0.8);
 }
 #nav-icon span:nth-child(3) {
     top: 39px;
-    background-color: #3CDA0D;
+    background-color: $primary-color;
     //border: 3px solid rgba(0, 112, 0, 0.8);
 }
 #nav-icon.open{
@@ -268,7 +268,7 @@
     -moz-transform: rotate(135deg);
     -o-transform: rotate(135deg);
     transform: rotate(135deg);
-    background: #3CDA0D;
+    background: $primary-color;
 }
 #nav-icon.open span:nth-child(2) {
     opacity: 0;
@@ -280,5 +280,5 @@
     -moz-transform: rotate(-135deg);
     -o-transform: rotate(-135deg);
     transform: rotate(-135deg);
-    background: #3CDA0D;
+    background: $primary-color;
 }

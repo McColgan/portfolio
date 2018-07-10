@@ -4,15 +4,15 @@
     max-width: 1300px;
     height: auto;
     z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
     margin: 0 auto;
-    background-image: url(../images/balloons-bg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    //background-image: url(../images/balloons-bg.png);
+    //background-size: cover;
+    //background-repeat: no-repeat;
     box-sizing: border-box;
-    border: 50px solid #272727;
+    //border: 50px solid #272727;
 }
 .balloons-container{
     position: relative;
@@ -22,6 +22,29 @@
     margin: 4em auto;
     overflow: hidden;
 }
+.balloons-h1{
+    position: relative;
+    color: $primary-color;
+    font-weight: 300;
+    //background: salmon;
+    margin: 5em 20% 4em 20%;
+    text-align: center;
+    &::before{
+        content: '"';
+        position: absolute;
+        font-size: 7em;
+        top: -0.5em;
+        left: -0.3em;
+    }
+    &::after{
+        content: '"';
+        position: absolute;
+        font-size: 7em;
+        top: -0.5em;
+        right: -0.3em;
+    }
+}
+
 .balloons-container-img{
     position: absolute;
     width: 80vw;
@@ -31,6 +54,7 @@
     transform: translateY(1000px);
     z-index: -1;
     background-repeat: no-repeat;
+    
 }
 
 .balloon1{
@@ -178,6 +202,12 @@
 }
 
 @media (max-width: 750px){
+    .balloons-h1{
+        &::before,
+        &::after{
+            font-size: 5em;
+        }
+    }
     .balloons-container-img{
         transform: translateY(1000px);
     }
@@ -228,7 +258,7 @@
 
 @media (max-width: 540px){
     .balloons-outer{
-        border: 25px solid #272727;
+        border: none;
     }
     .balloons-container{
         height: 380px;
@@ -253,6 +283,9 @@
 }
 
 @media (max-width: 480px){
+    .balloons-h1{
+        font-size: 1em;
+    }
     .balloons-container{
         height: 300px;
     }

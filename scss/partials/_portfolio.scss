@@ -10,7 +10,7 @@
 }
 .portfolio-header{
     position: absolute;
-    color: #3CDA0D;
+    color: $primary-color;
     margin: 0;
     padding: 0;
     font-size: 1.8em;
@@ -26,7 +26,7 @@
     position: absolute;
     height: 70%;
     width: 2px;
-    background: #3CDA0D;
+    background: $primary-color;
     margin-left: -0.75em;
     margin-top: 0.25em;
 }
@@ -55,7 +55,7 @@
         position: absolute;
         top: -8px;
         left: -8px;
-        color: rgba(#3cda0d,.85);
+        color: rgba($primary-color,.85);
     }
 }
 
@@ -66,8 +66,8 @@
     width: 100%;
     min-height: 50vw;
     overflow: hidden;
-    border-top: 4px solid #3CDA0D;
-    border-bottom: 4px solid #3CDA0D;     
+    border-top: 4px solid $primary-color;
+    border-bottom: 4px solid $primary-color;     
 }
 .layer{
     padding: 0;
@@ -113,7 +113,7 @@
     position: absolute;
     height: 100%;
     display: block;
-    background-color: #3cda0d;
+    background-color: $primary-color;
     width: 4px;
     top: 0;
     left: 50%;
@@ -124,17 +124,17 @@
     position: absolute;
     font-size: 1em;
     letter-spacing: 0.25em;
-    color: #3CDA0D;
+    color: $primary-color;
     text-decoration: none;
-    border: 4px solid #3CDA0D;
+    border: 4px solid $primary-color;
     padding: 0.3em 2em;
     font-weight: 400;
     transition: 300ms ease-in;
     margin: 1em auto;
     &:hover{
         background: #272727;
-        border-color: #3CDA0D;
-        color: #3CDA0D;
+        border-color: $primary-color;
+        color: $primary-color;
         transform: translateY(-10%);
     }
 }
