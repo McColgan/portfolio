@@ -76,7 +76,7 @@
     background-repeat: no-repeat;
     right: 38%;
     top: 55%;
-    transform: translate(0px, 1000px);
+    transform: translate(0px, 850px);
 }
 
 
@@ -86,7 +86,9 @@
 @media (min-width: 1700px){
     .balloon1{
         transform: translate(0px, -850px);
-
+    }
+    .balloon4{
+        transform: translate(0px, 900px);
     }
 }
 
@@ -102,7 +104,7 @@
         transform: translate(0px, -850px);
     }
     .balloon4{
-        transform: translate(0px, 800px);
+        transform: translate(0px, 780px);
     }
 }
 
@@ -124,7 +126,7 @@
         background-size: 35px 44px;
     }
     .balloon4{
-        transform: translate(0px, 750px);
+        transform: translate(0px, 700px);
         background-size: 25px 31px;
     }
 }

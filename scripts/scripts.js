@@ -47,7 +47,7 @@ $(document).ready(function(){
         //if(wScroll <= parentContainerHeight){
 
         $('.box-text-outer').css('top',-(wScroll * 0.02)+'em');
-        $('.profile-img').css('top',(wScroll * 0.035)+'em');
+        $('.profile-img').css('top',(wScroll * 0.03)+'em');
 
         // Skill-box fade in
         if(wScroll > $('.skills-flexbox').offset().top - ($(window).height() / 1.2)){
@@ -111,7 +111,7 @@ $(document).ready(function(){
 
 
 
-    //var parentContainerHeight = $('.balloons-outer').height();
+    
     $(window).scroll(function(){
         parallax();
         balloons();
