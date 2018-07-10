@@ -86,7 +86,7 @@ $(document).ready(function(){
 
         // Contact Parallax
         if(wScroll > $('.contact').offset().top - ($(window).height())){
-            $('#map').css('top',(wScroll * 0.4 )+'px');
+            $('#map').css('top',(wScroll * 0.2 )+'px');
                 
         }
 

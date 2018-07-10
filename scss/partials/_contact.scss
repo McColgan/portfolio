@@ -22,7 +22,7 @@
     height: 750px;
     width: 100%;
     //overflow: hidden;
-    transform: translateY(-2300px);
+    transform: translateY(-1100px);
 }
 
 // CONTACT FORM FLEXBOX //
@@ -148,7 +148,7 @@ input{
 }
 @media (max-width: 1100px){
     #map{
-        transform: translateY(-2100px);
+        transform: translateY(-1100px);
     }
     .contact-flexbox{
         flex-direction: column;
