@@ -69,21 +69,23 @@
 // SKILLS FLEXBOX //  
 .skills-flexbox{
     position: relative;
-    max-width: 800px;
+    max-width: 535px;
     margin: 18em auto 8em auto;
-    padding: 2em;
+    padding: 0.5em 0;
     width: auto;
     height: auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
     background-image: url(../images/technologies-bg.jpg);
+    //background: linear-gradient(-60deg, #00d2ff, #3a7bd5);
     background-size: 1100px 825px;
     background-position: center;
     background-repeat: no-repeat;
     //background-attachment: fixed;
-    box-shadow: inset 0 0 30px #000000;
+    box-shadow: 0 0 15px 5px #000000;
     border: 10px solid rgb(189, 0, 142);
+    //box-sizing: border-box;
     &::before{
         content: '';
         position: absolute;
@@ -91,7 +93,7 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background: rgba(189, 0, 142, 0.4);
+        background: rgba(189, 0, 142, 0.85);
         //background: rgba(39, 39, 39, 0.9);
     }
 }
@@ -100,13 +102,14 @@
     &::after{
         content: 'Technical Skills.';
         position: absolute;
-        top: -1.5em;
-        right: -0.21em;
-        font-size: 3em;
+        top: -1.69em;
+        right: -0.8em;
+        font-size: 2.2em;
         color: rgb(189, 0, 142);
         font-weight: 700;
         border: 10px solid rgb(189, 0, 142);
         z-index: -1;
+        
     }
 }
 .technologies-bg{
@@ -114,9 +117,9 @@
     &::after{
         content: 'Technologies.';
         position: absolute;
-        top: -1.5em;
-        right: -0.2em;
-        font-size: 3em;
+        top: -1.69em;
+        right: -0.8em;
+        font-size: 2.2em;
         color: rgb(189, 0, 142);
         font-weight: 700;
         border: 10px solid rgb(189, 0, 142);
@@ -128,25 +131,25 @@
 .skill-box{
     display: block;
     position: relative;
-    width: 150px;
-    height: 160px;
-    margin: 0.5em;
-    background: rgba(155, 0, 116, 0.5);
+    width: 114px;
+    height: 128px;
+    margin: 0.5em 1em;
+    //box-shadow: 15px 5px 5px rgba(189, 0, 142, 1);
+    background: linear-gradient(to right, rgba(0, 208, 255, 0.6), rgba(58, 123, 213, 0));
     color: #f3f3f3;
     -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     opacity: 0;
     transition: 1000ms,
-                margin-top 350ms,
-                background-color 350ms;
+                margin-top 350ms;
 
-    
+
     //transition: 350ms;
     transition-timing-function: cubic-bezier(.96,.25,.92,.63);
     transform: translateY(-20px);
     &:hover{
         margin-top: -8px;
-        background-color: rgba(189, 0, 142, 1);
+        background: linear-gradient(to right, rgba(58, 123, 213, 0.2),rgba(0, 208, 255, 0.8));
     }
     &.is-showing{
         opacity: 1;
@@ -155,12 +158,13 @@
 }
 .skill-box img{
     position: absolute;
-    width: 152px;
-    height: 162px;
+    width: 120px;
+    height: 130px;
     left: 50%;
     transform: translateX(-50%);
     //top: 1px;
     z-index: 3;
+    //overflow: unset;
 }
 .skill-box-content{
     padding: 0;
@@ -177,10 +181,10 @@
     p{
         position: relative;
         font-weight: 400;
-        font-size: 0.8em;
+        font-size: 0.6em;
         letter-spacing: 0.08em;
         text-align: center;
-        padding: 1em 1.5em 0 1.5em;
+        padding: 1.2em 1.5em 0 1.5em;
     }
 }
 .skill-icon{
@@ -270,10 +274,14 @@
     background-size: 70px auto;*/
 } 
     
+
+.android-icon{
+    background-image: url(../images/android-icon.png);
+    background-size: 40px 47px;
+}
 .box-padding{
     margin: 0.5em 2em;
 }
-
 // MEDIA QUERIES //
 @media (max-width: 1000px){
     .skills-flexbox{
@@ -315,14 +323,7 @@
         left: -0.2em;
     }
     .skills-flexbox{
-        padding: 1em 0.25em;
         margin: 14em auto 8em auto;
-    }
-    .skill-box{
-        //width: 130px;
-        //height: 140px;
-        margin: 0.5em 0.5em;
-        background: rgba(155, 0, 116, 0.8);
     }
     .techSkills-bg,
     .technologies-bg{
@@ -334,14 +335,6 @@
     }
     .technologies-bg{
         margin: 0 auto 8em auto;
-    }
-    .skill-box-content{
-        p{
-            font-size: 0.8em;
-            padding: 1.5em 1.5em 0 1.5em;
-            margin: 0 auto;
-            font-weight: 600;
-        }
     }
     
     

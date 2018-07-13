@@ -883,7 +883,7 @@ html, body {
     width: 30%;
     height: auto;
     position: relative;
-    background: #f46309;
+    background: #c45008;
     color: #272727;
     margin: 4em 0 0 0;
     padding: 2em;
@@ -892,7 +892,21 @@ html, body {
     border-radius: 3px;
     transform: translateY(70%);
     -webkit-clip-path: polygon(5% 5%, 100% 0, 96% 94%, 0% 100%);
-    clip-path: polygon(5% 5%, 100% 0, 96% 94%, 0% 100%); }
+    clip-path: polygon(5% 5%, 100% 0, 96% 94%, 0% 100%);
+    z-index: 2;
+    font-family: 'IBM Plex Mono', sans-serif; }
+    .intro-outer .box-text-outer::before {
+      position: absolute;
+      padding: 0;
+      margin: 0;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #f46309;
+      left: -1.5em;
+      top: -2em;
+      z-index: -1; }
     .intro-outer .box-text-outer p {
       font-size: 1.2em;
       padding: 0 3em;
@@ -1022,19 +1036,19 @@ html, body {
 
 .skills-flexbox {
   position: relative;
-  max-width: 800px;
+  max-width: 535px;
   margin: 18em auto 8em auto;
-  padding: 2em;
+  padding: 0.5em 0;
   width: auto;
   height: auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
   background-image: url(../images/technologies-bg.jpg);
   background-size: 1100px 825px;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 30px #000000;
+  box-shadow: 0 0 15px 5px #000000;
   border: 10px solid #bd008e; }
   .skills-flexbox::before {
     content: '';
@@ -1043,16 +1057,16 @@ html, body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(189, 0, 142, 0.4); }
+    background: rgba(189, 0, 142, 0.85); }
 
 .techSkills-bg {
   background-image: url(../images/techSkills-bg1.jpeg); }
   .techSkills-bg::after {
     content: 'Technical Skills.';
     position: absolute;
-    top: -1.5em;
-    right: -0.21em;
-    font-size: 3em;
+    top: -1.69em;
+    right: -0.8em;
+    font-size: 2.2em;
     color: #bd008e;
     font-weight: 700;
     border: 10px solid #bd008e;
@@ -1063,9 +1077,9 @@ html, body {
   .technologies-bg::after {
     content: 'Technologies.';
     position: absolute;
-    top: -1.5em;
-    right: -0.2em;
-    font-size: 3em;
+    top: -1.69em;
+    right: -0.8em;
+    font-size: 2.2em;
     color: #bd008e;
     font-weight: 700;
     border: 10px solid #bd008e;
@@ -1074,28 +1088,28 @@ html, body {
 .skill-box {
   display: block;
   position: relative;
-  width: 150px;
-  height: 160px;
-  margin: 0.5em;
-  background: rgba(155, 0, 116, 0.5);
+  width: 114px;
+  height: 128px;
+  margin: 0.5em 1em;
+  background: linear-gradient(to right, rgba(0, 208, 255, 0.6), rgba(58, 123, 213, 0));
   color: #f3f3f3;
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   opacity: 0;
-  transition: 1000ms, margin-top 350ms, background-color 350ms;
+  transition: 1000ms, margin-top 350ms;
   transition-timing-function: cubic-bezier(0.96, 0.25, 0.92, 0.63);
   transform: translateY(-20px); }
   .skill-box:hover {
     margin-top: -8px;
-    background-color: #bd008e; }
+    background: linear-gradient(to right, rgba(58, 123, 213, 0.2), rgba(0, 208, 255, 0.8)); }
   .skill-box.is-showing {
     opacity: 1;
     transform: translateY(0px); }
 
 .skill-box img {
   position: absolute;
-  width: 152px;
-  height: 162px;
+  width: 120px;
+  height: 130px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3; }
@@ -1115,10 +1129,10 @@ html, body {
   .skill-box-content p {
     position: relative;
     font-weight: 400;
-    font-size: 0.8em;
+    font-size: 0.6em;
     letter-spacing: 0.08em;
     text-align: center;
-    padding: 1em 1.5em 0 1.5em; }
+    padding: 1.2em 1.5em 0 1.5em; }
 
 .skill-icon {
   position: relative;
@@ -1205,6 +1219,10 @@ html, body {
     height: 70px;
     background-size: 70px auto;*/ }
 
+.android-icon {
+  background-image: url(../images/android-icon.png);
+  background-size: 40px 47px; }
+
 .box-padding {
   margin: 0.5em 2em; }
 
@@ -1236,23 +1254,14 @@ html, body {
     top: 0.5em;
     left: -0.2em; }
   .skills-flexbox {
-    padding: 1em 0.25em;
     margin: 14em auto 8em auto; }
-  .skill-box {
-    margin: 0.5em 0.5em;
-    background: rgba(155, 0, 116, 0.8); }
   .techSkills-bg::after,
   .technologies-bg::after {
     font-size: 1.5em;
     top: -1.9em;
     right: -0.4em; }
   .technologies-bg {
-    margin: 0 auto 8em auto; }
-  .skill-box-content p {
-    font-size: 0.8em;
-    padding: 1.5em 1.5em 0 1.5em;
-    margin: 0 auto;
-    font-weight: 600; } }
+    margin: 0 auto 8em auto; } }
 
 .portfolio {
   width: 100%;
@@ -1542,7 +1551,7 @@ html, body {
   position: absolute;
   width: 80vw;
   height: 70vw;
-  background-image: url(../images/balloons-bg.png);
+  background-image: url(../images/balloons-bg-grey.png);
   background-size: cover;
   transform: translateY(1000px);
   z-index: -1;
@@ -1595,47 +1604,41 @@ html, body {
 
 @media (min-width: 1700px) {
   .balloon1 {
-    transform: translate(0px, -850px); }
+    transform: translate(0px, -900px); }
   .balloon4 {
     transform: translate(0px, 900px); } }
 
 @media (max-width: 1500px) {
-  .balloons-container-img {
-    transform: translateY(950px); }
   .balloon1 {
-    transform: translate(0px, -850px); }
+    transform: translate(0px, -900px); }
   .balloon3 {
     transform: translate(0px, -850px); }
   .balloon4 {
     transform: translate(0px, 780px); } }
 
 @media (max-width: 1300px) {
-  .balloons-container-img {
-    transform: translateY(950px); }
   .balloon1 {
-    transform: translate(0px, -750px);
+    transform: translate(0px, -850px);
     background-size: 120px 153px; }
   .balloon2 {
     background-size: 45px 61px;
-    transform: translate(30px, -1380px); }
+    transform: translate(30px, -1480px); }
   .balloon3 {
-    transform: translate(0px, -750px);
+    transform: translate(0px, -820px);
     background-size: 35px 44px; }
   .balloon4 {
-    transform: translate(0px, 700px);
+    transform: translate(0px, 750px);
     background-size: 25px 31px; } }
 
 @media (max-width: 1050px) {
-  .balloons-container-img {
-    transform: translateY(900px); }
   .balloon1 {
-    transform: translate(0px, -700px);
+    transform: translate(0px, -800px);
     background-size: 120px 153px; }
   .balloon2 {
     background-size: 45px 61px;
-    transform: translate(30px, -1320px); }
+    transform: translate(30px, -1420px); }
   .balloon3 {
-    transform: translate(0px, -720px);
+    transform: translate(0px, -820px);
     background-size: 35px 44px; }
   .balloon4 {
     transform: translate(0px, 650px);
@@ -1643,7 +1646,7 @@ html, body {
 
 @media (max-width: 840px) {
   .balloons-container-img {
-    transform: translateY(850px); }
+    transform: translateY(950px); }
   .balloon1 {
     background-size: 80px 102px;
     transform: translate(0px, -800px); }
@@ -1669,7 +1672,7 @@ html, body {
   .balloon3 {
     transform: translate(0px, -850px); }
   .balloon4 {
-    transform: translate(0px, 600px); } }
+    transform: translate(0px, 580px); } }
 
 @media (max-width: 640px) {
   .balloons-container {
@@ -1680,7 +1683,7 @@ html, body {
   .balloons-container-img {
     width: 100%;
     height: 150vh;
-    transform: translateY(1000px); }
+    transform: translateY(900px); }
   .balloon1 {
     transform: translate(0px, -800px); }
   .balloon2 {
@@ -1688,7 +1691,7 @@ html, body {
   .balloon3 {
     transform: translate(0px, -820px); }
   .balloon4 {
-    transform: translate(0px, 800px); } }
+    transform: translate(0px, 700px); } }
 
 @media (max-width: 540px) {
   .balloons-outer {
@@ -1714,7 +1717,7 @@ html, body {
   .balloons-container {
     height: 300px; }
   .balloons-container-img {
-    transform: translateY(800px); }
+    transform: translateY(850px); }
   .balloon1 {
     transform: translate(-30px, -850px); }
   .balloon2 {
