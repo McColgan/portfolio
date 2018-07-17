@@ -39,11 +39,11 @@
 
 .balloons-container-img{
     position: absolute;
-    width: 80vw;
-    height: 70vw;
+    width: 100%;
+    height: 100%;
     background-image: url(../images/balloons-bg-grey.png);
     background-size: cover;
-    transform: translateY(1000px);
+    //background-attachment: fixed;
     z-index: -1;
     background-repeat: no-repeat;
     
@@ -172,9 +172,9 @@
 
 // MAX 840px //
 @media (max-width: 840px){
-    .balloons-container-img{
-        transform: translateY(950px);
-    }
+    // .balloons-container-img{
+    //     transform: translateY(950px);
+    // }
     .balloon1{
         background-size: 80px 102px;
         transform: translate(0px, -800px);
@@ -200,9 +200,9 @@
             font-size: 5em;
         }
     }
-    .balloons-container-img{
-        transform: translateY(1000px);
-    }
+    // .balloons-container-img{
+    //     transform: translateY(1000px);
+    // }
     .balloon1{
         transform: translate(0px, -850px);
         
@@ -232,7 +232,7 @@
     .balloons-container-img{
         width: 100%;
         height: 150vh;
-        transform: translateY(900px);
+        //transform: translateY(900px);
     }
     .balloon1{
         transform: translate(0px, -800px);
@@ -258,7 +258,7 @@
     .balloons-container-img{
         width: 100%;
         height: 150vh;
-        transform: translateY(1000px);
+        //transform: translateY(1000px);
     }
     .balloon1{
         transform: translate(-30px, -850px);
@@ -281,9 +281,9 @@
     .balloons-container{
         height: 300px;
     }
-    .balloons-container-img{
-        transform: translateY(850px);
-    }
+    // .balloons-container-img{
+    //     transform: translateY(850px);
+    // }
     .balloon1{
         transform: translate(-30px, -850px);
     }

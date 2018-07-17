@@ -40,6 +40,7 @@ $(document).ready(function(){
     
     $(window).scroll(function(){
         linkSwitching();
+        update();
     });
 
     var latestKnownScrollY = 0,
@@ -64,16 +65,16 @@ $(document).ready(function(){
         var wScroll = $(window).scrollTop();
 
         //if(wScroll <= parentContainerHeight){
-
-        $('.box-text-outer').css('top',-(wScroll * 0.02)+'em');
         $('.profile-img').css('top',(wScroll * 0.04)+'em');
+        $('.box-text-outer').css('top',-(wScroll * 0.02)+'em');
+        
 
         // Skill-box fade in
-        if(wScroll > $('.skills-flexbox').offset().top - ($(window).height() / 1.2)){
+        if(wScroll > $('.skills-flexbox').offset().top - ($(window).height() / 1)){
             $('.skill-box').each(function(i){
                 setTimeout(function(){
                     $('.skill-box').eq(i).addClass('is-showing');
-                }, 250 * (i+1));
+                }, 100 * (i+1));
             });
         }
         // Intro fade in 
@@ -104,9 +105,9 @@ $(document).ready(function(){
             $('#map').css('top',(wScroll * 0.2 )+'px');
         }
         // // Skills Parallax
-        // if(wScroll > $('.skills').offset().top - ($(window).height())){
-        //     $('.paint-texture').css('top',(wScroll * 0.4)+'px');
-        // }
+        if(wScroll > $('.skills').offset().top - ($(window).height())){
+            $('.paint-texture').css('top',(wScroll * 0.2)+'px');
+        }
 
         var parentContainerHeight = $('.balloons-outer').height();
         var offset = wScroll - $('.balloons-outer').offset().top +$(window).height() - 500;
@@ -116,7 +117,7 @@ $(document).ready(function(){
             $('.balloon2').css('top',(wScroll * 0.35 )+'px');
             $('.balloon3').css('top',(wScroll * 0.2 )+'px');
             $('.balloon4').css('top',(-wScroll * 0.1 )+'px');
-            $('.balloons-container-img').css('top',(-wScroll * 0.25 )+'px');
+            //$('.balloons-container-img').css('top',(-wScroll * 0.25 )+'px');
         }
     }
 
