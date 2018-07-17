@@ -117,7 +117,6 @@ $(document).ready(function(){
             $('.balloon2').css('top',(wScroll * 0.35 )+'px');
             $('.balloon3').css('top',(wScroll * 0.2 )+'px');
             $('.balloon4').css('top',(-wScroll * 0.1 )+'px');
-            //$('.balloons-container-img').css('top',(-wScroll * 0.25 )+'px');
         }
     }
 
