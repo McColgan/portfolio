@@ -1,4 +1,5 @@
 .skills{
+    position: relative;
     width: 100%;
     height: auto;
     padding: 0;
@@ -7,6 +8,7 @@
     background: linear-gradient(to right, #00d2ff, #3a7bd5);
     z-index: 1;
     position: relative;
+    overflow: hidden;
 }
 .down-triangle{
     width: 150px;
@@ -34,6 +36,19 @@
     background-position: center;
     background-repeat: no-repeat;
     left: 50%;
+    transform: translateX(-50%);
+}
+.paint-texture{
+    position: absolute;
+    bottom: 0;
+    width: 1080px;
+    height: 810px;
+    background-image: url(../images/paint-texture.png);
+    background-size: 1080px 810px;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 40%;
+    z-index: -1;
     transform: translateX(-50%);
 }
 .skills-header{
@@ -78,14 +93,11 @@
     justify-content: center;
     flex-wrap: wrap;
     background-image: url(../images/technologies-bg.jpg);
-    //background: linear-gradient(-60deg, #00d2ff, #3a7bd5);
     background-size: 1100px 825px;
     background-position: center;
     background-repeat: no-repeat;
-    //background-attachment: fixed;
-    box-shadow: 0 0 15px 5px #000000;
+    box-shadow: 0 0 15px 5px #181818;
     border: 10px solid rgb(189, 0, 142);
-    //box-sizing: border-box;
     &::before{
         content: '';
         position: absolute;
@@ -94,11 +106,12 @@
         bottom: 0;
         left: 0;
         background: rgba(189, 0, 142, 0.85);
-        //background: rgba(39, 39, 39, 0.9);
     }
+    
 }
 .techSkills-bg{
     background-image: url(../images/techSkills-bg1.jpeg);
+    
     &::after{
         content: 'Technical Skills.';
         position: absolute;
@@ -109,7 +122,8 @@
         font-weight: 700;
         border: 10px solid rgb(189, 0, 142);
         z-index: -1;
-        
+        //transform: rotate(3deg);
+        background: #272727;
     }
 }
 .technologies-bg{
@@ -117,13 +131,15 @@
     &::after{
         content: 'Technologies.';
         position: absolute;
-        top: -1.69em;
+        top: -1.8em;
         right: -0.8em;
         font-size: 2.2em;
         color: rgb(189, 0, 142);
         font-weight: 700;
         border: 10px solid rgb(189, 0, 142);
         z-index: -1;
+        transform: rotate(-4deg);
+        background: #272727;
     }
 }
 
@@ -149,7 +165,7 @@
     transform: translateY(-20px);
     &:hover{
         margin-top: -8px;
-        background: linear-gradient(to right, rgba(58, 123, 213, 0.2),rgba(0, 208, 255, 0.8));
+        //background: linear-gradient(to right, rgba(58, 123, 213, 0.2),rgba(0, 208, 255, 0.8));
     }
     &.is-showing{
         opacity: 1;
@@ -175,7 +191,7 @@
     bottom: 1.5em;
     left: 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     p{
@@ -290,17 +306,11 @@
     .skills-header{
         font-size: 6em;
     }
-    .techSkills-bg,
-    .technologies-bg{
-        &::after{
-            font-size: 2.5rem;
-            top: -1.6em;
-            right: -0.25em;
-        }
-    }
+    
     .technologies-bg{
         margin: 0 auto 8em auto;
     }
+    
 }
 @media (max-width: 700px){
     .techSkills-bg,
@@ -325,17 +335,11 @@
     .skills-flexbox{
         margin: 14em auto 8em auto;
     }
-    .techSkills-bg,
-    .technologies-bg{
-        &::after{
-        font-size: 1.5em;
-        top: -1.9em;
-        right: -0.4em;
-        }
+    .paint-texture{
+        display: none;
     }
     .technologies-bg{
         margin: 0 auto 8em auto;
     }
-    
     
 }

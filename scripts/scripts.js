@@ -103,7 +103,11 @@ $(document).ready(function(){
         if(wScroll > $('.contact').offset().top - ($(window).height())){
             $('#map').css('top',(wScroll * 0.2 )+'px');
         }
-        
+        // // Skills Parallax
+        // if(wScroll > $('.skills').offset().top - ($(window).height())){
+        //     $('.paint-texture').css('top',(wScroll * 0.4)+'px');
+        // }
+
         var parentContainerHeight = $('.balloons-outer').height();
         var offset = wScroll - $('.balloons-outer').offset().top +$(window).height() - 500;
             //if(wScroll <= parentContainerHeight){
