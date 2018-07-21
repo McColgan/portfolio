@@ -158,14 +158,11 @@
     opacity: 0;
     transition: 1000ms,
                 margin-top 350ms;
-
-
-    //transition: 350ms;
     transition-timing-function: cubic-bezier(.96,.25,.92,.63);
     transform: translateY(-20px);
     &:hover{
         margin-top: -8px;
-        //background: linear-gradient(to right, rgba(58, 123, 213, 0.2),rgba(0, 208, 255, 0.8));
+        
     }
     &.is-showing{
         opacity: 1;

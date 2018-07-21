@@ -358,7 +358,7 @@ html, body {
   background-size: 1300px 976px;
   background-position: -30px -255px;
   z-index: 2;
-  box-shadow: 0px 0px 30px 0px #2FCC00;
+  box-shadow: 0px 0px 20px 2px #2FCC00;
   transition: 350ms;
   transition-timing-function: cubic-bezier(0.96, 0.25, 0.92, 0.63); }
   #hero-item1:hover {
@@ -1231,23 +1231,23 @@ html, body {
   position: absolute;
   color: #2FCC00;
   margin: 0;
-  padding: 0;
-  font-size: 1.8em;
+  padding: 0 3em 0 0;
+  font-size: 1.6em;
   font-weight: 500;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.5rem;
   transform: rotate(-90deg);
-  left: -4em;
-  top: 20em;
+  left: -4.5em;
+  top: 11rem;
+  background: #272727;
   z-index: 4; }
 
 .portfolio-header::before {
   content: '';
   position: absolute;
-  height: 70%;
+  height: 100%;
   width: 2px;
   background: #2FCC00;
-  margin-left: -0.75em;
-  margin-top: 0.25em; }
+  margin-left: -0.75em; }
 
 .portfolio-title {
   margin: 0.5em auto;
@@ -1395,9 +1395,14 @@ html, body {
       top: -6px;
       left: -6px; }
   .portfolio-header {
-    font-size: 1.6em;
-    left: -4.5em;
-    top: 15em; } }
+    font-size: 1.4em;
+    left: -6.5em; } }
+
+@media (max-width: 1000px) {
+  .portfolio-header {
+    font-size: 1.2em;
+    left: -7em;
+    top: 10rem; } }
 
 @media (max-width: 800px) {
   .portfolio-title {
@@ -1409,8 +1414,7 @@ html, body {
       top: -4.5px;
       left: -4.5px; }
   .portfolio-header {
-    font-size: 1.5em;
-    left: -4.5em; }
+    left: -7.5em; }
   #wrapper {
     min-height: 75vw; }
   .layer {
@@ -1430,8 +1434,9 @@ html, body {
       top: -4px;
       left: -4px; }
   .portfolio-header {
-    font-size: 1em;
-    left: -5em; }
+    font-size: 0.9em;
+    left: -9em;
+    top: 9em; }
   .yoga-link {
     font-size: 0.7em; }
   #wrapper {
